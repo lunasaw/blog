@@ -1,0 +1,18 @@
+{
+  "name": "luna-blog",
+  "version": "1.0.0",
+  "description": "luna-blog",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy-gh": "GH=1 yarn docs:build && bash scripts/deploy-gh.sh",
+    "start": "vuepress dev docs"
+  },
+  "author": "luna",
+  "license": "ISC"
+}
