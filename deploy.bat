@@ -4,19 +4,18 @@ echo building...
 call build.bat
 echo building-complete.
 
-cd docs/.vuepress/dist
 git init
 git add -A
 git commit -m 'auto-deploy'
 git remote add origin https://gitee.com/luna_nov/blog.git
-git pull
-git push --force origin HEAD:gh-pages
+git remote add github https://github.com/czy1024/blog.git
 
+git pull
+git push --force origin HEAD:master
+git push --force github HEAD:master
 REM To delete the dist folder
-cd ..
-echo delete-directory: "%cd%/dist"
-rmdir /s /q "%cd%/dist"
-cd..
-cd..
+
+echo Auto-Deploy-Complete!
+pause
 echo Auto-Deploy-Complete!
 pause
