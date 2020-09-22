@@ -8,7 +8,7 @@ module.exports = {
       description: '程序猿.大三在读'
     }
   },
-    base: '/blog/',     // 仓库名字是press
+    base: '/blog/',     // 仓库名字是blog
     description: ' 世界上只有一种真正的英雄主义,那就是认清生活真相依旧热爱生活。-罗曼·罗兰Romain Rolland',
     head: [
         ['link', {

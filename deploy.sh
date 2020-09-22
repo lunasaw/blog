@@ -7,7 +7,7 @@ vuepress build .
 
 # 进入生成的文件夹
 echo "执行命令：cd ./docs/.vuepress/dist\n"
-cd ./docs/.vuepress/dist
+# cd ./docs/.vuepress/dist
 
 # 初始化一个仓库，仅仅是做了一个初始化的操作，项目里的文件还没有被跟踪
 echo "执行命令：git init\n"
@@ -27,7 +27,7 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
 # git push -f http://github.z01.com/waipo/waipo.git master:gh-pages
-git push -f https://github.com/luna_nov/blog.git master:gh-pages
+git push -f https://github.com/luna_nov/blog.git master:master
 
 
 # 返回到上一次的工作目录
