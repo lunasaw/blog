@@ -80,7 +80,7 @@ module.exports = {
             artist: 'Sasha Sloan',
             url: '/audio/DancingWithYourGhost.mp3',
             cover: '/images/DancingWithYourGhost.jpg'
-          }
+          },
         ], 
         position: {
           left: "10px",
