@@ -5,7 +5,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
       title: 'luna-blog',
-      description: '程序猿.大三在读'
+      description: '一枚"即将"成型的程序猿.大三生'
     }
   },
     base: '/blog/',     // 仓库名字是blog
@@ -78,8 +78,8 @@ module.exports = {
           {
             name: 'Sasha Sloan - Dancing With Your Ghost',
             artist: 'Sasha Sloan',
-            url: '/audio/audio1.mp3',
-            cover: '/images/audio1.jpg'
+            url: '/audio/DancingWithYourGhost.mp3',
+            cover: '/images/DancingWithYourGhost.jpg'
           }
         ], 
         position: {
