@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vueDemo</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.55f231c8.css" as="style"><link rel="preload" href="/assets/js/app.9b97b6bb.js" as="script"><link rel="preload" href="/assets/js/2.96850cbb.js" as="script"><link rel="preload" href="/assets/js/39.b2bf595e.js" as="script"><link rel="prefetch" href="/assets/js/10.19f0fc8a.js"><link rel="prefetch" href="/assets/js/11.b0403087.js"><link rel="prefetch" href="/assets/js/12.95b6c692.js"><link rel="prefetch" href="/assets/js/13.b7356fc6.js"><link rel="prefetch" href="/assets/js/14.6bf32bd0.js"><link rel="prefetch" href="/assets/js/15.0e40050f.js"><link rel="prefetch" href="/assets/js/16.edb4c47d.js"><link rel="prefetch" href="/assets/js/17.fc1ad3fd.js"><link rel="prefetch" href="/assets/js/18.441a2e01.js"><link rel="prefetch" href="/assets/js/19.7722aa85.js"><link rel="prefetch" href="/assets/js/20.29b96607.js"><link rel="prefetch" href="/assets/js/21.1073b483.js"><link rel="prefetch" href="/assets/js/22.84e7bb0f.js"><link rel="prefetch" href="/assets/js/23.04c277e0.js"><link rel="prefetch" href="/assets/js/24.0a310583.js"><link rel="prefetch" href="/assets/js/25.0c5d605a.js"><link rel="prefetch" href="/assets/js/26.c81f1d16.js"><link rel="prefetch" href="/assets/js/27.8542cfaa.js"><link rel="prefetch" href="/assets/js/28.dd3fc23b.js"><link rel="prefetch" href="/assets/js/29.abd3404b.js"><link rel="prefetch" href="/assets/js/3.9b49658b.js"><link rel="prefetch" href="/assets/js/30.977381a8.js"><link rel="prefetch" href="/assets/js/31.665b9e16.js"><link rel="prefetch" href="/assets/js/32.eb5fbebb.js"><link rel="prefetch" href="/assets/js/33.a1a2d8a5.js"><link rel="prefetch" href="/assets/js/34.44e17a50.js"><link rel="prefetch" href="/assets/js/35.7e9ab881.js"><link rel="prefetch" href="/assets/js/36.817b3d4f.js"><link rel="prefetch" href="/assets/js/37.db47e548.js"><link rel="prefetch" href="/assets/js/38.7a8fae66.js"><link rel="prefetch" href="/assets/js/4.697cbb8d.js"><link rel="prefetch" href="/assets/js/40.b41503cc.js"><link rel="prefetch" href="/assets/js/5.1f81d228.js"><link rel="prefetch" href="/assets/js/6.989dc93d.js"><link rel="prefetch" href="/assets/js/7.a7829c05.js"><link rel="prefetch" href="/assets/js/8.a50bcd20.js"><link rel="prefetch" href="/assets/js/9.65013b97.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.55f231c8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-vue脚手架"><a href="#_1-vue脚手架" class="header-anchor">#</a> 1. vue脚手架</h2> <div class="language- extra-class"><pre><code>用来创建vue项目的工具包
+创建项目:
+    npm install -g vue-cli
+    vue init webpack VueDemo
+开发环境运行:
+    cd VueDemo
+    npm install
+    npm run dev
+生产环境打包发布
+    npm run build
+    npm install -g serve
+    serve dist
+    http://localhost:5000
+</code></pre></div><h2 id="_2-eslint"><a href="#_2-eslint" class="header-anchor">#</a> 2. eslint</h2> <div class="language- extra-class"><pre><code>用来做项目编码规范检查的工具
+基本原理: 定义了很多规则, 检查项目的代码一旦发现违背了某个规则就输出相应的提示信息
+有相应的配置, 可定制检查
+</code></pre></div><h2 id="_3-组件化编程"><a href="#_3-组件化编程" class="header-anchor">#</a> 3. 组件化编程</h2> <div class="language- extra-class"><pre><code>vue文件包含3个部分
+    &lt;template&gt;
+      &lt;div&gt;&lt;/div&gt;
+    &lt;/template&gt;
+    &lt;script&gt;
+        export default {
+		  props: []/{}
+          data(){},
+		  computed: {}
+          methods: {},
+		  
+		  watch: {}
+		  filters: {}
+		  directives: {}
+		  components: {}
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+    &lt;/style&gt;
+组件化编码的基本流程
+	1). 拆分界面, 抽取组件
+	2). 编写静态组件
+	3). 编写动态组件
+    	初始化数据, 动态显示初始化界面
+    	实现与用户交互功能
+组件通信的5种方式
+	props
+	vue的自定义事件
+	pubsub第三方库
+	slot
+	vuex(后面单独讲)
+props:
+    父子组件间通信的基本方式
+    属性值的2大类型: 
+        一般: 父组件--&gt;子组件
+        函数: 子组件--&gt;父组件
+	隔层组件间传递: 必须逐层传递(麻烦)
+	兄弟组件间: 必须借助父组件(麻烦)
+vue自定义事件
+    子组件与父组件的通信方式
+    用来取代function props
+    不适合隔层组件和兄弟组件间的通信
+pubsub第三方库(消息订阅与发布)
+    适合于任何关系的组件间通信
+slot
+    通信是带数据的标签
+    注意: 标签是在父组件中解析
+vuex
+    多组件共享状态(数据的管理)
+    组件间的关系也没有限制
+    功能比pubsub强大, 更适用于vue项目
+</code></pre></div><h2 id="_4-ajax"><a href="#_4-ajax" class="header-anchor">#</a> 4. ajax</h2> <div class="language-js extra-class"><pre class="language-js"><code>相关库<span class="token operator">:</span>
+    vue<span class="token operator">-</span>resource<span class="token operator">:</span> vue插件<span class="token punctuation">,</span> 多用于vue1<span class="token punctuation">.</span>x
+    axios<span class="token operator">:</span> 第三方库<span class="token punctuation">,</span> 多用于vue2<span class="token punctuation">.</span>x
+vue<span class="token operator">-</span>resource使用
+    <span class="token comment">// 引入模块</span>
+    <span class="token keyword">import</span> VueResource <span class="token keyword">from</span> <span class="token string">'vue-resource'</span>
+    <span class="token comment">// 使用插件</span>
+    Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueResource<span class="token punctuation">)</span>
+    
+    <span class="token comment">// 通过vue/组件对象发送ajax请求</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$http<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/someUrl'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// success callback</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token comment">//返回结果数据</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// error callback</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span> <span class="token comment">//错误信息</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+axios使用
+    <span class="token comment">// 引入模块</span>
+    <span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+    
+    <span class="token comment">// 发送ajax请求</span>
+    axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token comment">// 得到返回结果数据</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_5-vue-router"><a href="#_5-vue-router" class="header-anchor">#</a> 5. vue-router</h2> <div class="language-html extra-class"><pre class="language-html"><code>vue用来实现SPA的插件
+使用vue-router
+    1. 创建路由器: router/index.js
+      new VueRouter({
+        routes: [
+          { // 一般路由
+            path: '/about',
+            component: about
+          },
+          { // 自动跳转路由
+            path: '/', 
+            redirect: '/about'
+          }
+        ]
+      })
+    2. 注册路由器: main.js
+       import router from './router'
+       	new Vue({
+       		router
+       	})
+    3. 使用路由组件标签:
+       	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/xxx<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Go to XXX<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+       	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+编写路由的3步
+    1. 定义路由组件    
+    2. 映射路由
+    3. 编写路由2个标签
+嵌套路由
+    children: [
+        {
+          path: '/home/news',
+          component: news
+        },
+        {
+          path: 'message',
+          component: message
+        }
+     ]
+向路由组件传递数据
+    params: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/home/news/abc/123<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    props: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span> <span class="token attr-name">msg</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>abc<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>
+缓存路由组件
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>keep-alive</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>keep-alive</span><span class="token punctuation">&gt;</span></span>
+路由的编程式导航
+	this.$router.push(path): 相当于点击路由链接(可以返回到当前路由界面)
+	this.$router.replace(path): 用新路由替换当前路由(不可以返回到当前路由界面)
+	this.$router.back(): 请求(返回)上一个记录路由
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9b97b6bb.js" defer></script><script src="/assets/js/2.96850cbb.js" defer></script><script src="/assets/js/39.b2bf595e.js" defer></script>
+  </body>
+</html>

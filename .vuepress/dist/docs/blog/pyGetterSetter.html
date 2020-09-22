@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>pyGetterSetter</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.55f231c8.css" as="style"><link rel="preload" href="/assets/js/app.9b97b6bb.js" as="script"><link rel="preload" href="/assets/js/2.96850cbb.js" as="script"><link rel="preload" href="/assets/js/19.7722aa85.js" as="script"><link rel="prefetch" href="/assets/js/10.19f0fc8a.js"><link rel="prefetch" href="/assets/js/11.b0403087.js"><link rel="prefetch" href="/assets/js/12.95b6c692.js"><link rel="prefetch" href="/assets/js/13.b7356fc6.js"><link rel="prefetch" href="/assets/js/14.6bf32bd0.js"><link rel="prefetch" href="/assets/js/15.0e40050f.js"><link rel="prefetch" href="/assets/js/16.edb4c47d.js"><link rel="prefetch" href="/assets/js/17.fc1ad3fd.js"><link rel="prefetch" href="/assets/js/18.441a2e01.js"><link rel="prefetch" href="/assets/js/20.29b96607.js"><link rel="prefetch" href="/assets/js/21.1073b483.js"><link rel="prefetch" href="/assets/js/22.84e7bb0f.js"><link rel="prefetch" href="/assets/js/23.04c277e0.js"><link rel="prefetch" href="/assets/js/24.0a310583.js"><link rel="prefetch" href="/assets/js/25.0c5d605a.js"><link rel="prefetch" href="/assets/js/26.c81f1d16.js"><link rel="prefetch" href="/assets/js/27.8542cfaa.js"><link rel="prefetch" href="/assets/js/28.dd3fc23b.js"><link rel="prefetch" href="/assets/js/29.abd3404b.js"><link rel="prefetch" href="/assets/js/3.9b49658b.js"><link rel="prefetch" href="/assets/js/30.977381a8.js"><link rel="prefetch" href="/assets/js/31.665b9e16.js"><link rel="prefetch" href="/assets/js/32.eb5fbebb.js"><link rel="prefetch" href="/assets/js/33.a1a2d8a5.js"><link rel="prefetch" href="/assets/js/34.44e17a50.js"><link rel="prefetch" href="/assets/js/35.7e9ab881.js"><link rel="prefetch" href="/assets/js/36.817b3d4f.js"><link rel="prefetch" href="/assets/js/37.db47e548.js"><link rel="prefetch" href="/assets/js/38.7a8fae66.js"><link rel="prefetch" href="/assets/js/39.b2bf595e.js"><link rel="prefetch" href="/assets/js/4.697cbb8d.js"><link rel="prefetch" href="/assets/js/40.b41503cc.js"><link rel="prefetch" href="/assets/js/5.1f81d228.js"><link rel="prefetch" href="/assets/js/6.989dc93d.js"><link rel="prefetch" href="/assets/js/7.a7829c05.js"><link rel="prefetch" href="/assets/js/8.a50bcd20.js"><link rel="prefetch" href="/assets/js/9.65013b97.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.55f231c8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>Java中我们在定义类的成员变量时，如果是私有属性，我们通过调用属性对应的set和get方法来获取和设置变量的值，如果我们将这种方式来用于python那么代码如下:</p> <div class="language-# coding=utf-8 extra-class"><pre class="language-text"><code>class Money(object):
+    def __init__(self):
+        self.money = 0
+ 
+    def getMoney(self):
+        return self.money
+ 
+    def setMoney(self, value):
+        if isinstance(value, int):
+            self.money = value
+        else:
+            print(&quot;error：输入类型与预设类型不一致&quot;)
+ 
+ 
+def main():
+    money = Money()
+    money.setMoney(10)
+    print(money.getMoney())
+ 
+ 
+if __name__ == '__main__':
+    main()
+
+</code></pre></div><p>但是在python中我们可以利用python属性来实现，代码如下：</p> <div class="language-# coding=utf-8 extra-class"><pre class="language-text"><code>class Money(object):
+    def __init__(self):
+        self.money = 0
+ 
+    def getMoney(self):
+        return self.money
+ 
+    def setMoney(self, value):
+        if isinstance(value, int):
+            self.money = value
+        else:
+            print(&quot;error：输入类型与预设类型不一致&quot;)
+ 
+    dealValue = property(getMoney, setMoney)
+ 
+ 
+def main():
+    money = Money()
+    money.dealValue=100
+    print(money.dealValue)
+ 
+ 
+if __name__ == '__main__':
+    main()
+
+</code></pre></div><p>也使用property完全取代get/set</p> <div class="language-# coding=utf-8 extra-class"><pre class="language-text"><code>class Money(object):
+    def __init__(self):
+        self.__money = 0
+ 
+    @property
+    def money(self):
+        return self.__money
+ 
+    @money.setter
+    def money(self, value):
+        if isinstance(value, int):
+            self.__money = value
+        else:
+            print(&quot;error：输入类型与预设类型不一致&quot;)
+ 
+ 
+def main():
+    a = Money()
+    a.money = 10
+    print(a.money)
+ 
+ 
+if __name__ == '__main__':
+    main()
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9b97b6bb.js" defer></script><script src="/assets/js/2.96850cbb.js" defer></script><script src="/assets/js/19.7722aa85.js" defer></script>
+  </body>
+</html>

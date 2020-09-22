@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql-DDL</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.55f231c8.css" as="style"><link rel="preload" href="/assets/js/app.9b97b6bb.js" as="script"><link rel="preload" href="/assets/js/2.96850cbb.js" as="script"><link rel="preload" href="/assets/js/29.abd3404b.js" as="script"><link rel="prefetch" href="/assets/js/10.19f0fc8a.js"><link rel="prefetch" href="/assets/js/11.b0403087.js"><link rel="prefetch" href="/assets/js/12.95b6c692.js"><link rel="prefetch" href="/assets/js/13.b7356fc6.js"><link rel="prefetch" href="/assets/js/14.6bf32bd0.js"><link rel="prefetch" href="/assets/js/15.0e40050f.js"><link rel="prefetch" href="/assets/js/16.edb4c47d.js"><link rel="prefetch" href="/assets/js/17.fc1ad3fd.js"><link rel="prefetch" href="/assets/js/18.441a2e01.js"><link rel="prefetch" href="/assets/js/19.7722aa85.js"><link rel="prefetch" href="/assets/js/20.29b96607.js"><link rel="prefetch" href="/assets/js/21.1073b483.js"><link rel="prefetch" href="/assets/js/22.84e7bb0f.js"><link rel="prefetch" href="/assets/js/23.04c277e0.js"><link rel="prefetch" href="/assets/js/24.0a310583.js"><link rel="prefetch" href="/assets/js/25.0c5d605a.js"><link rel="prefetch" href="/assets/js/26.c81f1d16.js"><link rel="prefetch" href="/assets/js/27.8542cfaa.js"><link rel="prefetch" href="/assets/js/28.dd3fc23b.js"><link rel="prefetch" href="/assets/js/3.9b49658b.js"><link rel="prefetch" href="/assets/js/30.977381a8.js"><link rel="prefetch" href="/assets/js/31.665b9e16.js"><link rel="prefetch" href="/assets/js/32.eb5fbebb.js"><link rel="prefetch" href="/assets/js/33.a1a2d8a5.js"><link rel="prefetch" href="/assets/js/34.44e17a50.js"><link rel="prefetch" href="/assets/js/35.7e9ab881.js"><link rel="prefetch" href="/assets/js/36.817b3d4f.js"><link rel="prefetch" href="/assets/js/37.db47e548.js"><link rel="prefetch" href="/assets/js/38.7a8fae66.js"><link rel="prefetch" href="/assets/js/39.b2bf595e.js"><link rel="prefetch" href="/assets/js/4.697cbb8d.js"><link rel="prefetch" href="/assets/js/40.b41503cc.js"><link rel="prefetch" href="/assets/js/5.1f81d228.js"><link rel="prefetch" href="/assets/js/6.989dc93d.js"><link rel="prefetch" href="/assets/js/7.a7829c05.js"><link rel="prefetch" href="/assets/js/8.a50bcd20.js"><link rel="prefetch" href="/assets/js/9.65013b97.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.55f231c8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="review-mysql"><a href="#review-mysql" class="header-anchor">#</a> Review mysql</h2> <h3 id="库管理"><a href="#库管理" class="header-anchor">#</a> 库管理</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>一、创建库
+<span class="token keyword">create</span> <span class="token keyword">database</span> 【<span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span>】 库名【 <span class="token keyword">character</span> <span class="token keyword">set</span> 字符集名】<span class="token punctuation">;</span>
+
+二、修改库
+<span class="token keyword">alter</span> <span class="token keyword">database</span> 库名 <span class="token keyword">character</span> <span class="token keyword">set</span> 字符集名<span class="token punctuation">;</span>
+三、删除库
+<span class="token keyword">drop</span> <span class="token keyword">database</span> 【<span class="token keyword">if</span> <span class="token keyword">exists</span>】 库名<span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="表管理"><a href="#表管理" class="header-anchor">#</a> 表管理</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>一、创建表 ★
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【<span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span>】 表名<span class="token punctuation">(</span>
+	字段名 字段类型 【约束】<span class="token punctuation">,</span>
+	字段名 字段类型 【约束】<span class="token punctuation">,</span>
+	。。。
+	字段名 字段类型 【约束】 
+
+<span class="token punctuation">)</span>
+
+二、修改表
+
+<span class="token number">1.</span>添加列
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span> <span class="token keyword">column</span> 列名 类型 【<span class="token keyword">first</span><span class="token operator">|</span><span class="token keyword">after</span> 字段名】<span class="token punctuation">;</span>
+<span class="token number">2.</span>修改列的类型或约束
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> <span class="token keyword">column</span> 列名 新类型 【新约束】<span class="token punctuation">;</span>
+<span class="token number">3.</span>修改列名
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 change <span class="token keyword">column</span> 旧列名 新列名 类型<span class="token punctuation">;</span>
+<span class="token number">4</span> <span class="token punctuation">.</span>删除列
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> <span class="token keyword">column</span> 列名<span class="token punctuation">;</span>
+<span class="token number">5.</span>修改表名
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">rename</span> 【<span class="token keyword">to</span>】 新表名<span class="token punctuation">;</span>
+
+三、删除表
+<span class="token keyword">drop</span> <span class="token keyword">table</span>【<span class="token keyword">if</span> <span class="token keyword">exists</span>】 表名<span class="token punctuation">;</span>
+
+四、复制表
+<span class="token number">1</span>、复制表的结构
+<span class="token keyword">create</span> <span class="token keyword">table</span> 表名 <span class="token operator">like</span> 旧表<span class="token punctuation">;</span>
+<span class="token number">2</span>、复制表的结构<span class="token operator">+</span>数据
+<span class="token keyword">create</span> <span class="token keyword">table</span> 表名 
+<span class="token keyword">select</span> 查询列表 <span class="token keyword">from</span> 旧表【<span class="token keyword">where</span> 筛选】<span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="类型约束"><a href="#类型约束" class="header-anchor">#</a> 类型约束</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>一、数值型
+<span class="token number">1</span>、整型
+<span class="token keyword">tinyint</span>、<span class="token keyword">smallint</span>、<span class="token keyword">mediumint</span>、<span class="token keyword">int</span><span class="token operator">/</span><span class="token keyword">integer</span>、<span class="token keyword">bigint</span>
+<span class="token number">1</span>         <span class="token number">2</span>        <span class="token number">3</span>          <span class="token number">4</span>            <span class="token number">8</span>
+
+特点：
+①都可以设置无符号和有符号，默认有符号，通过<span class="token keyword">unsigned</span>设置无符号
+②如果超出了范围，会报<span class="token keyword">out</span> <span class="token operator">or</span> range异常，插入临界值
+③长度可以不指定，默认会有一个长度
+长度代表显示的最大宽度，如果不够则左边用<span class="token number">0</span>填充，但需要搭配zerofill，并且默认变为无符号整型
+
+
+<span class="token number">2</span>、浮点型
+定点数：<span class="token keyword">decimal</span><span class="token punctuation">(</span>M<span class="token punctuation">,</span>D<span class="token punctuation">)</span>
+浮点数:
+	<span class="token keyword">float</span><span class="token punctuation">(</span>M<span class="token punctuation">,</span>D<span class="token punctuation">)</span>   <span class="token number">4</span>
+	<span class="token keyword">double</span><span class="token punctuation">(</span>M<span class="token punctuation">,</span>D<span class="token punctuation">)</span>  <span class="token number">8</span>
+
+特点：
+①M代表整数部位<span class="token operator">+</span>小数部位的个数，D代表小数部位
+②如果超出范围，则报<span class="token keyword">out</span> <span class="token operator">or</span> range异常，并且插入临界值
+③M和D都可以省略，但对于定点数，M默认为<span class="token number">10</span>，D默认为<span class="token number">0</span>
+④如果精度要求较高，则优先考虑使用定点数
+
+二、字符型
+<span class="token keyword">char</span>、<span class="token keyword">varchar</span>、<span class="token keyword">binary</span>、<span class="token keyword">varbinary</span>、<span class="token keyword">enum</span>、<span class="token keyword">set</span>、<span class="token keyword">text</span>、<span class="token keyword">blob</span>
+
+<span class="token keyword">char</span>：固定长度的字符，写法为<span class="token keyword">char</span><span class="token punctuation">(</span>M<span class="token punctuation">)</span>，最大长度不能超过M，其中M可以省略，默认为<span class="token number">1</span>
+<span class="token keyword">varchar</span>：可变长度的字符，写法为<span class="token keyword">varchar</span><span class="token punctuation">(</span>M<span class="token punctuation">)</span>，最大长度不能超过M，其中M不可以省略
+
+三、日期型
+<span class="token keyword">year</span>年
+<span class="token keyword">date</span>日期
+<span class="token keyword">time</span>时间
+<span class="token keyword">datetime</span> 日期<span class="token operator">+</span>时间          <span class="token number">8</span>      
+<span class="token keyword">timestamp</span> 日期<span class="token operator">+</span>时间         <span class="token number">4</span>   比较容易受时区、语法模式、版本的影响，更能反映当前时区的真实时间
+</code></pre></div><h3 id="常见约束"><a href="#常见约束" class="header-anchor">#</a> 常见约束</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>一、常见的约束
+<span class="token operator">NOT</span> <span class="token boolean">NULL</span>：非空，该字段的值必填
+<span class="token keyword">UNIQUE</span>：唯一，该字段的值不可重复
+<span class="token keyword">DEFAULT</span>：默认，该字段的值不用手动插入有默认值
+<span class="token keyword">CHECK</span>：检查，mysql不支持
+<span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span>：主键，该字段的值不可重复并且非空  <span class="token keyword">unique</span><span class="token operator">+</span><span class="token operator">not</span> <span class="token boolean">null</span>
+<span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span>：外键，该字段的值引用了另外的表的字段
+
+主键和唯一
+<span class="token number">1</span>、区别：
+①、一个表至多有一个主键，但可以有多个唯一
+②、主键不允许为空，唯一可以为空
+<span class="token number">2</span>、相同点
+都具有唯一性
+都支持组合键，但不推荐
+外键：
+<span class="token number">1</span>、用于限制两个表的关系，从表的字段值引用了主表的某字段值
+<span class="token number">2</span>、外键列和主表的被引用列要求类型一致，意义一样，名称无要求
+<span class="token number">3</span>、主表的被引用列要求是一个<span class="token keyword">key</span>（一般就是主键）
+<span class="token number">4</span>、插入数据，先插入主表
+删除数据，先删除从表
+可以通过以下两种方式来删除主表的记录
+<span class="token comment">#方式一：级联删除</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> stuinfo <span class="token keyword">ADD</span> <span class="token keyword">CONSTRAINT</span> fk_stu_major <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span>majorid<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> major<span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">ON</span> <span class="token keyword">DELETE</span> <span class="token keyword">CASCADE</span><span class="token punctuation">;</span>
+
+<span class="token comment">#方式二：级联置空</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> stuinfo <span class="token keyword">ADD</span> <span class="token keyword">CONSTRAINT</span> fk_stu_major <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span>majorid<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> major<span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">ON</span> <span class="token keyword">DELETE</span> <span class="token keyword">SET</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+
+二、创建表时添加约束
+<span class="token keyword">create</span> <span class="token keyword">table</span> 表名<span class="token punctuation">(</span>
+	字段名 字段类型 <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">,</span><span class="token comment">#非空</span>
+	字段名 字段类型 <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span><span class="token comment">#主键</span>
+	字段名 字段类型 <span class="token keyword">unique</span><span class="token punctuation">,</span><span class="token comment">#唯一</span>
+	字段名 字段类型 <span class="token keyword">default</span> 值<span class="token punctuation">,</span><span class="token comment">#默认</span>
+	<span class="token keyword">constraint</span> 约束名 <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>字段名<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表（被引用列）
+
+<span class="token punctuation">)</span>
+注意：
+			支持类型		可以起约束名			
+列级约束		除了外键		不可以
+表级约束		除了非空和默认	可以，但对主键无效
+
+列级约束可以在一个字段上追加多个，中间用空格隔开，没有顺序要求
+
+三、修改表时添加或删除约束
+<span class="token number">1</span>、非空
+添加非空
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
+删除非空
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 <span class="token punctuation">;</span>
+
+<span class="token number">2</span>、默认
+添加默认
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 <span class="token keyword">default</span> 值<span class="token punctuation">;</span>
+删除默认
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 <span class="token punctuation">;</span>
+<span class="token number">3</span>、主键
+添加主键
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span>【 <span class="token keyword">constraint</span> 约束名】 <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>字段名<span class="token punctuation">)</span><span class="token punctuation">;</span>
+删除主键
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">;</span>
+
+<span class="token number">4</span>、唯一
+添加唯一
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span>【 <span class="token keyword">constraint</span> 约束名】 <span class="token keyword">unique</span><span class="token punctuation">(</span>字段名<span class="token punctuation">)</span><span class="token punctuation">;</span>
+删除唯一
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> <span class="token keyword">index</span> 索引名<span class="token punctuation">;</span>
+<span class="token number">5</span>、外键
+添加外键
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span>【 <span class="token keyword">constraint</span> 约束名】 <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>字段名<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表（被引用列）<span class="token punctuation">;</span>
+删除外键
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> 约束名<span class="token punctuation">;</span>
+
+
+四、自增长列
+特点：
+<span class="token number">1</span>、不用手动插入值，可以自动提供序列值，默认从<span class="token number">1</span>开始，步长为<span class="token number">1</span>
+auto_increment_increment
+如果要更改起始值：手动插入值
+如果要更改步长：更改系统变量
+<span class="token keyword">set</span> auto_increment_increment<span class="token operator">=</span>值<span class="token punctuation">;</span>
+<span class="token number">2</span>、一个表至多有一个自增长列
+<span class="token number">3</span>、自增长列只能支持数值型
+<span class="token number">4</span>、自增长列必须为一个<span class="token keyword">key</span>
+
+一、创建表时设置自增长列
+<span class="token keyword">create</span> <span class="token keyword">table</span> 表<span class="token punctuation">(</span>
+	字段名 字段类型 约束 <span class="token keyword">auto_increment</span>
+<span class="token punctuation">)</span>
+二、修改表时设置自增长列
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 约束 <span class="token keyword">auto_increment</span>
+三、删除自增长列
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 约束 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9b97b6bb.js" defer></script><script src="/assets/js/2.96850cbb.js" defer></script><script src="/assets/js/29.abd3404b.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql-DQL</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.55f231c8.css" as="style"><link rel="preload" href="/assets/js/app.9b97b6bb.js" as="script"><link rel="preload" href="/assets/js/2.96850cbb.js" as="script"><link rel="preload" href="/assets/js/31.665b9e16.js" as="script"><link rel="prefetch" href="/assets/js/10.19f0fc8a.js"><link rel="prefetch" href="/assets/js/11.b0403087.js"><link rel="prefetch" href="/assets/js/12.95b6c692.js"><link rel="prefetch" href="/assets/js/13.b7356fc6.js"><link rel="prefetch" href="/assets/js/14.6bf32bd0.js"><link rel="prefetch" href="/assets/js/15.0e40050f.js"><link rel="prefetch" href="/assets/js/16.edb4c47d.js"><link rel="prefetch" href="/assets/js/17.fc1ad3fd.js"><link rel="prefetch" href="/assets/js/18.441a2e01.js"><link rel="prefetch" href="/assets/js/19.7722aa85.js"><link rel="prefetch" href="/assets/js/20.29b96607.js"><link rel="prefetch" href="/assets/js/21.1073b483.js"><link rel="prefetch" href="/assets/js/22.84e7bb0f.js"><link rel="prefetch" href="/assets/js/23.04c277e0.js"><link rel="prefetch" href="/assets/js/24.0a310583.js"><link rel="prefetch" href="/assets/js/25.0c5d605a.js"><link rel="prefetch" href="/assets/js/26.c81f1d16.js"><link rel="prefetch" href="/assets/js/27.8542cfaa.js"><link rel="prefetch" href="/assets/js/28.dd3fc23b.js"><link rel="prefetch" href="/assets/js/29.abd3404b.js"><link rel="prefetch" href="/assets/js/3.9b49658b.js"><link rel="prefetch" href="/assets/js/30.977381a8.js"><link rel="prefetch" href="/assets/js/32.eb5fbebb.js"><link rel="prefetch" href="/assets/js/33.a1a2d8a5.js"><link rel="prefetch" href="/assets/js/34.44e17a50.js"><link rel="prefetch" href="/assets/js/35.7e9ab881.js"><link rel="prefetch" href="/assets/js/36.817b3d4f.js"><link rel="prefetch" href="/assets/js/37.db47e548.js"><link rel="prefetch" href="/assets/js/38.7a8fae66.js"><link rel="prefetch" href="/assets/js/39.b2bf595e.js"><link rel="prefetch" href="/assets/js/4.697cbb8d.js"><link rel="prefetch" href="/assets/js/40.b41503cc.js"><link rel="prefetch" href="/assets/js/5.1f81d228.js"><link rel="prefetch" href="/assets/js/6.989dc93d.js"><link rel="prefetch" href="/assets/js/7.a7829c05.js"><link rel="prefetch" href="/assets/js/8.a50bcd20.js"><link rel="prefetch" href="/assets/js/9.65013b97.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.55f231c8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="review-mysql"><a href="#review-mysql" class="header-anchor">#</a> Review mysql</h2> <h4 id="基础查询"><a href="#基础查询" class="header-anchor">#</a> 基础查询</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、语法
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+二、特点
+<span class="token number">1</span>、查询列表可以是字段、常量、表达式、函数，也可以是多个
+<span class="token number">2</span>、查询结果是一个虚拟表
+
+三、示例
+<span class="token number">1</span>、查询单个字段
+<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+<span class="token number">2</span>、查询多个字段
+<span class="token keyword">select</span> 字段名，字段名 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+<span class="token number">3</span>、查询所有字段
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名
+<span class="token number">4</span>、查询常量
+<span class="token keyword">select</span> 常量值<span class="token punctuation">;</span>
+注意：字符型和日期型的常量值必须用单引号引起来，数值型不需要
+<span class="token number">5</span>、查询函数
+<span class="token keyword">select</span> 函数名<span class="token punctuation">(</span>实参列表<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token number">6</span>、查询表达式
+<span class="token keyword">select</span> <span class="token number">100</span><span class="token operator">/</span><span class="token number">1234</span><span class="token punctuation">;</span>
+<span class="token number">7</span>、起别名
+①<span class="token keyword">as</span>
+②空格
+<span class="token number">8</span>、去重
+<span class="token keyword">select</span> <span class="token keyword">distinct</span> 字段名 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+
+<span class="token number">9</span>、<span class="token operator">+</span>
+作用：做加法运算
+<span class="token keyword">select</span> 数值<span class="token operator">+</span>数值<span class="token punctuation">;</span> 直接运算
+<span class="token keyword">select</span> 字符<span class="token operator">+</span>数值<span class="token punctuation">;</span>先试图将字符转换成数值，如果转换成功，则继续运算；否则转换成<span class="token number">0</span>，再做运算
+<span class="token keyword">select</span> <span class="token boolean">null</span><span class="token operator">+</span>值<span class="token punctuation">;</span>结果都为<span class="token boolean">null</span>
+
+<span class="token number">10</span>、【补充】concat函数
+功能：拼接字符
+<span class="token keyword">select</span> concat<span class="token punctuation">(</span>字符<span class="token number">1</span>，字符<span class="token number">2</span>，字符<span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token number">11</span>、【补充】ifnull函数
+功能：判断某字段或表达式是否为<span class="token boolean">null</span>，如果为<span class="token boolean">null</span> 返回指定的值，否则返回原本的值
+<span class="token keyword">select</span> ifnull<span class="token punctuation">(</span>commission_pct<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">from</span> employees<span class="token punctuation">;</span>
+
+<span class="token number">12</span>、【补充】isnull函数
+功能：判断某字段或表达式是否为<span class="token boolean">null</span>，如果是，则返回<span class="token number">1</span>，否则返回<span class="token number">0</span>
+
+</code></pre></div><h4 id="条件查询"><a href="#条件查询" class="header-anchor">#</a> 条件查询</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、语法
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表名
+<span class="token keyword">where</span> 筛选条件
+
+二、筛选条件的分类
+<span class="token number">1</span>、简单条件运算符
+<span class="token operator">&gt;</span> <span class="token operator">&lt;</span> <span class="token operator">=</span> <span class="token operator">&lt;&gt;</span> <span class="token operator">!=</span> <span class="token operator">&gt;=</span> <span class="token operator">&lt;=</span>  <span class="token operator">&lt;=&gt;</span>安全等于
+<span class="token number">2</span>、逻辑运算符
+<span class="token operator">&amp;&amp;</span> <span class="token operator">and</span>
+<span class="token operator">||</span> <span class="token operator">or</span>
+<span class="token operator">!</span>  <span class="token operator">not</span>
+<span class="token number">3</span>、模糊查询
+<span class="token operator">like</span>:一般搭配通配符使用，可以判断字符型或数值型
+通配符：<span class="token operator">%</span>任意多个字符，_任意单个字符
+
+<span class="token operator">between</span> <span class="token operator">and</span>
+<span class="token operator">in</span>
+<span class="token operator">is</span> <span class="token boolean">null</span> <span class="token operator">/</span><span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span>：用于判断<span class="token boolean">null</span>值
+
+<span class="token operator">is</span> <span class="token boolean">null</span> PK <span class="token operator">&lt;=&gt;</span>
+			普通类型的数值	<span class="token boolean">null</span>值		可读性
+<span class="token operator">is</span> <span class="token boolean">null</span>		×			√		√
+	<span class="token operator">&lt;=&gt;</span>		√			√		×
+
+</code></pre></div><h4 id="排序查询"><a href="#排序查询" class="header-anchor">#</a> 排序查询</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、语法
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表
+<span class="token keyword">where</span> 筛选条件
+<span class="token keyword">order</span> <span class="token keyword">by</span> 排序列表 【<span class="token keyword">asc</span>}<span class="token keyword">desc</span>】
+
+二、特点
+<span class="token number">1</span>、<span class="token keyword">asc</span> ：升序，如果不写默认升序
+   <span class="token keyword">desc</span>：降序
+
+<span class="token number">2</span>、排序列表 支持 单个字段、多个字段、函数、表达式、别名
+
+<span class="token number">3</span>、<span class="token keyword">order</span> <span class="token keyword">by</span>的位置一般放在查询语句的最后（除<span class="token keyword">limit</span>语句之外）
+</code></pre></div><h4 id="常见函数"><a href="#常见函数" class="header-anchor">#</a> 常见函数</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、概述
+功能：类似于java中的方法
+好处：提高重用性和隐藏实现细节
+调用：<span class="token keyword">select</span> 函数名<span class="token punctuation">(</span>实参列表<span class="token punctuation">)</span><span class="token punctuation">;</span>
+二、单行函数
+<span class="token number">1</span>、字符函数
+concat:连接
+substr:截取子串
+upper:变大写
+lower：变小写
+<span class="token keyword">replace</span>：替换
+length：获取字节长度
+trim:去前后空格
+lpad：左填充
+rpad：右填充
+instr:获取子串第一次出现的索引
+<span class="token number">2</span>、数学函数
+ceil:向上取整
+round：四舍五入
+mod:取模
+floor：向下取整
+<span class="token keyword">truncate</span>:截断
+rand:获取随机数，返回<span class="token number">0</span><span class="token operator">-</span><span class="token number">1</span>之间的小数
+
+<span class="token number">3</span>、日期函数
+
+now：返回当前日期<span class="token operator">+</span>时间
+<span class="token keyword">year</span>:返回年
+<span class="token keyword">month</span>：返回月
+<span class="token keyword">day</span>:返回日
+date_format:将日期转换成字符
+curdate:返回当前日期
+str_to_date:将字符转换成日期
+curtime：返回当前时间
+<span class="token keyword">hour</span>:小时
+<span class="token keyword">minute</span>:分钟
+<span class="token keyword">second</span>：秒
+datediff:返回两个日期相差的天数
+monthname:以英文形式返回月
+
+
+<span class="token number">4</span>、其他函数
+version 当前数据库服务器的版本
+<span class="token keyword">database</span> 当前打开的数据库
+<span class="token keyword">user</span>当前用户
+password<span class="token punctuation">(</span><span class="token string">'字符'</span><span class="token punctuation">)</span>：返回该字符的密码形式
+md5<span class="token punctuation">(</span><span class="token string">'字符'</span><span class="token punctuation">)</span>:返回该字符的md5加密形式
+
+
+
+<span class="token number">5</span>、流程控制函数
+
+①<span class="token keyword">if</span><span class="token punctuation">(</span>条件表达式，表达式<span class="token number">1</span>，表达式<span class="token number">2</span><span class="token punctuation">)</span>：如果条件表达式成立，返回表达式<span class="token number">1</span>，否则返回表达式<span class="token number">2</span>
+②<span class="token keyword">case</span>情况<span class="token number">1</span>
+<span class="token keyword">case</span> 变量或表达式或字段
+<span class="token keyword">when</span> 常量<span class="token number">1</span> <span class="token keyword">then</span> 值<span class="token number">1</span>
+<span class="token keyword">when</span> 常量<span class="token number">2</span> <span class="token keyword">then</span> 值<span class="token number">2</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">else</span> 值n
+<span class="token keyword">end</span>
+
+③<span class="token keyword">case</span>情况<span class="token number">2</span>
+<span class="token keyword">case</span> 
+<span class="token keyword">when</span> 条件<span class="token number">1</span> <span class="token keyword">then</span> 值<span class="token number">1</span>
+<span class="token keyword">when</span> 条件<span class="token number">2</span> <span class="token keyword">then</span> 值<span class="token number">2</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">else</span> 值n
+<span class="token keyword">end</span>
+
+三、分组函数
+<span class="token number">1</span>、分类
+max 最大值
+min 最小值
+sum 和
+avg 平均值
+count 计算个数
+
+<span class="token number">2</span>、特点
+
+①语法
+<span class="token keyword">select</span> <span class="token function">max</span><span class="token punctuation">(</span>字段<span class="token punctuation">)</span> <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+
+②支持的类型
+sum和avg一般用于处理数值型
+max、min、count可以处理任何数据类型
+
+③以上分组函数都忽略<span class="token boolean">null</span>
+④都可以搭配<span class="token keyword">distinct</span>使用，实现去重的统计
+<span class="token keyword">select</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">distinct</span> 字段<span class="token punctuation">)</span> <span class="token keyword">from</span> 表<span class="token punctuation">;</span>
+⑤count函数
+<span class="token function">count</span><span class="token punctuation">(</span>字段<span class="token punctuation">)</span>：统计该字段非空值的个数
+<span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>:统计结果集的行数
+案例：查询每个部门的员工个数
+<span class="token number">1</span> xx    <span class="token number">10</span>
+<span class="token number">2</span> dd    <span class="token number">20</span>
+<span class="token number">3</span> mm    <span class="token number">20</span>
+<span class="token number">4</span> aa    <span class="token number">40</span>
+<span class="token number">5</span> hh    <span class="token number">40</span>
+
+<span class="token function">count</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>:统计结果集的行数
+
+效率上：
+MyISAM存储引擎，<span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>最高
+<span class="token keyword">InnoDB</span>存储引擎，<span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>和<span class="token function">count</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>效率<span class="token operator">&gt;</span><span class="token function">count</span><span class="token punctuation">(</span>字段<span class="token punctuation">)</span>
+
+⑥ 和分组函数一同查询的字段，要求是<span class="token keyword">group</span> <span class="token keyword">by</span>后出现的字段
+</code></pre></div><h4 id="分组函数"><a href="#分组函数" class="header-anchor">#</a> 分组函数</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、语法
+<span class="token keyword">select</span> 分组函数，分组后的字段
+<span class="token keyword">from</span> 表
+【<span class="token keyword">where</span> 筛选条件】
+<span class="token keyword">group</span> <span class="token keyword">by</span> 分组的字段
+【<span class="token keyword">having</span> 分组后的筛选】
+【<span class="token keyword">order</span> <span class="token keyword">by</span> 排序列表】
+
+
+二、特点
+
+			使用关键字		筛选的表	 位置
+分组前筛选	<span class="token keyword">where</span>			原始表		  <span class="token keyword">group</span> <span class="token keyword">by</span>的前面
+分组后筛选	<span class="token keyword">having</span>		分组后的结果		<span class="token keyword">group</span> <span class="token keyword">by</span> 的后面
+</code></pre></div><h4 id="连接查询"><a href="#连接查询" class="header-anchor">#</a> 连接查询</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、含义
+当查询中涉及到了多个表的字段，需要使用多表连接
+<span class="token keyword">select</span> 字段<span class="token number">1</span>，字段<span class="token number">2</span>
+<span class="token keyword">from</span> 表<span class="token number">1</span>，表<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+
+笛卡尔乘积：当查询多个表时，没有添加有效的连接条件，导致多个表所有行实现完全连接
+如何解决：添加有效的连接条件
+
+二、分类
+
+按年代分类：
+	sql92：
+		等值
+		非等值
+		自连接
+
+		也支持一部分外连接（用于oracle、sqlserver，mysql不支持）
+	sql99【推荐使用】
+		内连接
+			等值
+			非等值
+			自连接
+		外连接
+			左外
+			右外
+			全外（mysql不支持）
+		交叉连接
+			
+
+三、SQL92语法
+<span class="token number">1</span>、等值连接
+语法：
+	<span class="token keyword">select</span> 查询列表
+	<span class="token keyword">from</span> 表<span class="token number">1</span> 别名<span class="token punctuation">,</span>表<span class="token number">2</span> 别名
+	<span class="token keyword">where</span> 表<span class="token number">1.</span><span class="token keyword">key</span><span class="token operator">=</span>表<span class="token number">2.</span><span class="token keyword">key</span>
+	【<span class="token operator">and</span> 筛选条件】
+	【<span class="token keyword">group</span> <span class="token keyword">by</span> 分组字段】
+	【<span class="token keyword">having</span> 分组后的筛选】
+	【<span class="token keyword">order</span> <span class="token keyword">by</span> 排序字段】
+
+特点：
+	① 一般为表起别名
+	②多表的顺序可以调换
+	③n表连接至少需要n<span class="token operator">-</span><span class="token number">1</span>个连接条件
+	④等值连接的结果是多表的交集部分
+
+
+<span class="token number">2</span>、非等值连接
+语法：
+	<span class="token keyword">select</span> 查询列表
+	<span class="token keyword">from</span> 表<span class="token number">1</span> 别名<span class="token punctuation">,</span>表<span class="token number">2</span> 别名
+	<span class="token keyword">where</span> 非等值的连接条件
+	【<span class="token operator">and</span> 筛选条件】
+	【<span class="token keyword">group</span> <span class="token keyword">by</span> 分组字段】
+	【<span class="token keyword">having</span> 分组后的筛选】
+	【<span class="token keyword">order</span> <span class="token keyword">by</span> 排序字段】
+<span class="token number">3</span>、自连接
+
+语法：
+	<span class="token keyword">select</span> 查询列表
+	<span class="token keyword">from</span> 表 别名<span class="token number">1</span><span class="token punctuation">,</span>表 别名<span class="token number">2</span>
+	<span class="token keyword">where</span> 等值的连接条件
+	【<span class="token operator">and</span> 筛选条件】
+	【<span class="token keyword">group</span> <span class="token keyword">by</span> 分组字段】
+	【<span class="token keyword">having</span> 分组后的筛选】
+	【<span class="token keyword">order</span> <span class="token keyword">by</span> 排序字段】
+
+
+四、SQL99语法
+<span class="token number">1</span>、内连接
+语法：
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表<span class="token number">1</span> 别名
+【<span class="token keyword">inner</span>】 <span class="token keyword">join</span> 表<span class="token number">2</span> 别名 <span class="token keyword">on</span> 连接条件
+<span class="token keyword">where</span> 筛选条件
+<span class="token keyword">group</span> <span class="token keyword">by</span> 分组列表
+<span class="token keyword">having</span> 分组后的筛选
+<span class="token keyword">order</span> <span class="token keyword">by</span> 排序列表
+<span class="token keyword">limit</span> 子句<span class="token punctuation">;</span>
+
+特点：
+①表的顺序可以调换
+②内连接的结果<span class="token operator">=</span>多表的交集
+③n表连接至少需要n<span class="token operator">-</span><span class="token number">1</span>个连接条件
+
+分类：
+等值连接
+非等值连接
+自连接
+
+<span class="token number">2</span>、外连接
+语法：
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表<span class="token number">1</span> 别名
+<span class="token keyword">left</span><span class="token operator">|</span><span class="token keyword">right</span><span class="token operator">|</span><span class="token keyword">full</span>【<span class="token keyword">outer</span>】 <span class="token keyword">join</span> 表<span class="token number">2</span> 别名 <span class="token keyword">on</span> 连接条件
+<span class="token keyword">where</span> 筛选条件
+<span class="token keyword">group</span> <span class="token keyword">by</span> 分组列表
+<span class="token keyword">having</span> 分组后的筛选
+<span class="token keyword">order</span> <span class="token keyword">by</span> 排序列表
+<span class="token keyword">limit</span> 子句<span class="token punctuation">;</span>
+特点：
+①查询的结果<span class="token operator">=</span>主表中所有的行，如果从表和它匹配的将显示匹配行，如果从表没有匹配的则显示<span class="token boolean">null</span>
+②<span class="token keyword">left</span> <span class="token keyword">join</span> 左边的就是主表，<span class="token keyword">right</span> <span class="token keyword">join</span> 右边的就是主表
+  <span class="token keyword">full</span> <span class="token keyword">join</span> 两边都是主表
+③一般用于查询除了交集部分的剩余的不匹配的行
+
+<span class="token number">3</span>、交叉连接
+
+语法：
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表<span class="token number">1</span> 别名
+<span class="token keyword">cross</span> <span class="token keyword">join</span> 表<span class="token number">2</span> 别名<span class="token punctuation">;</span>
+
+特点：
+类似于笛卡尔乘积
+</code></pre></div><h4 id="子查询"><a href="#子查询" class="header-anchor">#</a> 子查询</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、含义
+嵌套在其他语句内部的<span class="token keyword">select</span>语句称为子查询或内查询，
+外面的语句可以是<span class="token keyword">insert</span>、<span class="token keyword">update</span>、<span class="token keyword">delete</span>、<span class="token keyword">select</span>等，一般<span class="token keyword">select</span>作为外面语句较多
+外面如果为<span class="token keyword">select</span>语句，则此语句称为外查询或主查询
+
+二、分类
+<span class="token number">1</span>、按出现位置
+<span class="token keyword">select</span>后面：
+		仅仅支持标量子查询
+<span class="token keyword">from</span>后面：
+		表子查询
+<span class="token keyword">where</span>或<span class="token keyword">having</span>后面：
+		标量子查询
+		列子查询
+		行子查询
+<span class="token keyword">exists</span>后面：
+		标量子查询
+		列子查询
+		行子查询
+		表子查询
+
+<span class="token number">2</span>、按结果集的行列
+标量子查询（单行子查询）：结果集为一行一列
+列子查询（多行子查询）：结果集为多行一列
+行子查询：结果集为多行多列
+表子查询：结果集为多行多列
+
+
+三、示例
+<span class="token keyword">where</span>或<span class="token keyword">having</span>后面
+<span class="token number">1</span>、标量子查询
+案例：查询最低工资的员工姓名和工资
+①最低工资
+<span class="token keyword">select</span> <span class="token function">min</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token keyword">from</span> employees
+
+②查询员工的姓名和工资，要求工资<span class="token operator">=</span>①
+<span class="token keyword">select</span> last_name<span class="token punctuation">,</span>salary
+<span class="token keyword">from</span> employees
+<span class="token keyword">where</span> salary<span class="token operator">=</span><span class="token punctuation">(</span>
+	<span class="token keyword">select</span> <span class="token function">min</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token keyword">from</span> employees
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token number">2</span>、列子查询
+案例：查询所有是领导的员工姓名
+①查询所有员工的 manager_id
+<span class="token keyword">select</span> manager_id
+<span class="token keyword">from</span> employees
+
+②查询姓名，employee_id属于①列表的一个
+<span class="token keyword">select</span> last_name
+<span class="token keyword">from</span> employees
+<span class="token keyword">where</span> employee_id <span class="token operator">in</span><span class="token punctuation">(</span>
+	<span class="token keyword">select</span> manager_id
+	<span class="token keyword">from</span> employees
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="分页查询"><a href="#分页查询" class="header-anchor">#</a> 分页查询</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、应用场景
+当要查询的条目数太多，一页显示不全
+二、语法
+
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表
+<span class="token keyword">limit</span> 【<span class="token keyword">offset</span>，】size<span class="token punctuation">;</span>
+注意：
+<span class="token keyword">offset</span>代表的是起始的条目索引，默认从<span class="token number">0</span>卡死
+size代表的是显示的条目数
+
+公式：
+假如要显示的页数为page，每一页条目数为size
+<span class="token keyword">select</span> 查询列表
+<span class="token keyword">from</span> 表
+<span class="token keyword">limit</span> <span class="token punctuation">(</span>page<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>size<span class="token punctuation">,</span>size<span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="联合查询"><a href="#联合查询" class="header-anchor">#</a> 联合查询</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>一、含义
+<span class="token keyword">union</span>：合并、联合，将多次查询结果合并成一个结果
+二、语法
+查询语句<span class="token number">1</span>
+<span class="token keyword">union</span> 【<span class="token keyword">all</span>】
+查询语句<span class="token number">2</span>
+<span class="token keyword">union</span> 【<span class="token keyword">all</span>】
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+三、意义
+<span class="token number">1</span>、将一条比较复杂的查询语句拆分成多条语句
+<span class="token number">2</span>、适用于查询多个表的时候，查询的列基本是一致
+
+四、特点
+<span class="token number">1</span>、要求多条查询语句的查询列数必须一致
+<span class="token number">2</span>、要求多条查询语句的查询的各列类型、顺序最好一致
+<span class="token number">3</span>、<span class="token keyword">union</span> 去重，<span class="token keyword">union</span> <span class="token keyword">all</span>包含重复项
+</code></pre></div><h4 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>语法：
+<span class="token keyword">select</span> 查询列表    ⑦
+<span class="token keyword">from</span> 表<span class="token number">1</span> 别名       ①
+连接类型 <span class="token keyword">join</span> 表<span class="token number">2</span>   ②
+<span class="token keyword">on</span> 连接条件         ③
+<span class="token keyword">where</span> 筛选          ④
+<span class="token keyword">group</span> <span class="token keyword">by</span> 分组列表   ⑤
+<span class="token keyword">having</span> 筛选         ⑥
+<span class="token keyword">order</span> <span class="token keyword">by</span>排序列表    ⑧
+<span class="token keyword">limit</span> 起始条目索引，条目数<span class="token punctuation">;</span>  ⑨
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9b97b6bb.js" defer></script><script src="/assets/js/2.96850cbb.js" defer></script><script src="/assets/js/31.665b9e16.js" defer></script>
+  </body>
+</html>
