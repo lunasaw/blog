@@ -78,7 +78,7 @@ module.exports = {
           {
             name: 'Sasha Sloan - Dancing With Your Ghost',
             artist: 'Sasha Sloan',
-            url: '/audio/Sasha Sloan - Dancing With Your Ghost.mp3',
+            url: '/audio/audio1.mp3',
             cover: '/images/audio1.jpg'
           }
         ], 
