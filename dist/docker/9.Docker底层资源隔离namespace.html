@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker 资源隔离 | luna-blog</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="一枚"即将"成型的程序猿.大三生">
+    <link rel="preload" href="/blog/assets/css/0.styles.2b5e347a.css" as="style"><link rel="preload" href="/blog/assets/js/app.40b1cfc1.js" as="script"><link rel="preload" href="/blog/assets/js/3.856b35cc.js" as="script"><link rel="preload" href="/blog/assets/js/1.a8a0dfd8.js" as="script"><link rel="preload" href="/blog/assets/js/37.cee246a5.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.037e513c.js"><link rel="prefetch" href="/blog/assets/js/11.1f598265.js"><link rel="prefetch" href="/blog/assets/js/12.cf0d3782.js"><link rel="prefetch" href="/blog/assets/js/13.f93752b2.js"><link rel="prefetch" href="/blog/assets/js/14.74af374e.js"><link rel="prefetch" href="/blog/assets/js/15.f3550ea5.js"><link rel="prefetch" href="/blog/assets/js/16.23171d80.js"><link rel="prefetch" href="/blog/assets/js/17.b4a38c63.js"><link rel="prefetch" href="/blog/assets/js/18.611a9321.js"><link rel="prefetch" href="/blog/assets/js/19.57554b92.js"><link rel="prefetch" href="/blog/assets/js/20.6ed6c41c.js"><link rel="prefetch" href="/blog/assets/js/21.b02f67f6.js"><link rel="prefetch" href="/blog/assets/js/22.ebae4ddd.js"><link rel="prefetch" href="/blog/assets/js/23.ff6e0f8d.js"><link rel="prefetch" href="/blog/assets/js/24.bbf5110d.js"><link rel="prefetch" href="/blog/assets/js/25.20acdf69.js"><link rel="prefetch" href="/blog/assets/js/26.f48b3442.js"><link rel="prefetch" href="/blog/assets/js/27.a9399694.js"><link rel="prefetch" href="/blog/assets/js/28.a15790ac.js"><link rel="prefetch" href="/blog/assets/js/29.c850f03a.js"><link rel="prefetch" href="/blog/assets/js/30.1b31111c.js"><link rel="prefetch" href="/blog/assets/js/31.1935e03f.js"><link rel="prefetch" href="/blog/assets/js/32.e0e64930.js"><link rel="prefetch" href="/blog/assets/js/33.267b5941.js"><link rel="prefetch" href="/blog/assets/js/34.9da8a9bc.js"><link rel="prefetch" href="/blog/assets/js/35.2006f572.js"><link rel="prefetch" href="/blog/assets/js/36.bde0bc91.js"><link rel="prefetch" href="/blog/assets/js/38.f833b697.js"><link rel="prefetch" href="/blog/assets/js/39.b4de8fc8.js"><link rel="prefetch" href="/blog/assets/js/4.ab8a0d0b.js"><link rel="prefetch" href="/blog/assets/js/40.49559aae.js"><link rel="prefetch" href="/blog/assets/js/41.3b6d1cfb.js"><link rel="prefetch" href="/blog/assets/js/42.ab5b08d8.js"><link rel="prefetch" href="/blog/assets/js/43.c30a8a1b.js"><link rel="prefetch" href="/blog/assets/js/44.ae3693fa.js"><link rel="prefetch" href="/blog/assets/js/45.e4492761.js"><link rel="prefetch" href="/blog/assets/js/46.065219c3.js"><link rel="prefetch" href="/blog/assets/js/47.0ce539f9.js"><link rel="prefetch" href="/blog/assets/js/48.a4847133.js"><link rel="prefetch" href="/blog/assets/js/49.c7b593ec.js"><link rel="prefetch" href="/blog/assets/js/5.4c4e8a08.js"><link rel="prefetch" href="/blog/assets/js/50.e1575c62.js"><link rel="prefetch" href="/blog/assets/js/51.0cce777e.js"><link rel="prefetch" href="/blog/assets/js/52.abc3cd9c.js"><link rel="prefetch" href="/blog/assets/js/53.934f66b0.js"><link rel="prefetch" href="/blog/assets/js/54.61d81c53.js"><link rel="prefetch" href="/blog/assets/js/6.8699b80c.js"><link rel="prefetch" href="/blog/assets/js/7.8b8dc825.js"><link rel="prefetch" href="/blog/assets/js/8.0717b6b4.js"><link rel="prefetch" href="/blog/assets/js/9.81882180.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.2b5e347a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>luna-blog</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>luna</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/xiaoxin.jpg" alt="luna-blog" class="logo"> <span class="site-name">luna-blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/kaili/" class="nav-link"><i class="iconfont undefined"></i>
+  kaili
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/luna/" class="nav-link"><i class="iconfont undefined"></i>
+  luna
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  关键字
+</a></div><div class="nav-item"><a href="/blog/forme.html" class="nav-link"><i class="iconfont undefined"></i>
+  readme
+</a></div><div class="nav-item"><a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></div><div class="nav-item"><a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://gitee.com/luna_nov/blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  本站源码
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="http://iszychen.club" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  luna
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><!----> <h3 class="name" data-v-b038cec6>
+    luna
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>43</h3> <h6 data-v-b038cec6>文章</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>26</h3> <h6 data-v-b038cec6>标签</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/kaili/" class="nav-link"><i class="iconfont undefined"></i>
+  kaili
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/luna/" class="nav-link"><i class="iconfont undefined"></i>
+  luna
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  关键字
+</a></div><div class="nav-item"><a href="/blog/forme.html" class="nav-link"><i class="iconfont undefined"></i>
+  readme
+</a></div><div class="nav-item"><a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></div><div class="nav-item"><a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://gitee.com/luna_nov/blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  本站源码
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="http://iszychen.club" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  luna
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>docker</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/docker/1.Docker技术原理.html" class="sidebar-link">Docker 技术原理</a></li><li><a href="/blog/docker/2.Docker容器、镜像、仓库.html" class="sidebar-link">Docker 技术原理</a></li><li><a href="/blog/docker/3.Docker镜像配置与原理.html" class="sidebar-link">Docker 镜像配置</a></li><li><a href="/blog/docker/4.Docker容器的使用.html" class="sidebar-link">Docker 容器操作</a></li><li><a href="/blog/docker/5.Dockerfile的编写规则.html" class="sidebar-link">Docker File</a></li><li><a href="/blog/docker/6.docker架构设计.html" class="sidebar-link">Docker 技术原理</a></li><li><a href="/blog/docker/7.Docker安全性能了解.html" class="sidebar-link">Docker 安全</a></li><li><a href="/blog/docker/8.Docker安全性能提升.html" class="sidebar-link">Docker 安全</a></li><li><a href="/blog/docker/9.Docker底层资源隔离namespace.html" class="active sidebar-link">Docker 资源隔离</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Docker 资源隔离</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>luna</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>Docker 资源隔离</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>luna</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-06-03</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/blog/docker/9.Docker%E5%BA%95%E5%B1%82%E8%B5%84%E6%BA%90%E9%9A%94%E7%A6%BBnamespace.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      docker
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h3 id="_1-前言"><a href="#_1-前言" class="header-anchor">#</a> 1. 前言</h3> <p>​	在上一章Docker安全性能中已有讲解Namespace的功能作用。</p> <p>​	概念回顾：Docker 是基于 Linux 内核的 <strong>Namespace</strong> 技术实现资源隔离的，<strong>所有的容器都共享主机的内核</strong>。其实这与以虚拟机为代表的云计算时代还是有很多区别的，比如虚拟机有着更好的隔离性和安全性，而容器的隔离性和安全性则相对较弱。</p> <p>​	虽然Namespace的技术的隔离和安全性相对较弱，那么究竟什么是 Namespace，各种 Namespace 都有什么作用，为什么 Docker 需要 Namespace呢？</p> <h3 id="_2-什么是namespace"><a href="#_2-什么是namespace" class="header-anchor">#</a> 2.什么是Namespace</h3> <p>​	<strong>维基百科定义</strong>：Namespace 是 Linux 内核的一项功能，该功能对内核资源进行分区，以使一组进程看到一组资源，而另一组进程看到另一组资源。Namespace 的工作方式通过为一组资源和进程设置相同的 Namespace 而起作用，但是这些 Namespace 引用了不同的资源。资源可能存在于多个 Namespace 中。这些资源可以是进程 ID、主机名、用户 ID、文件名、与网络访问相关的名称和进程间通信。</p> <p>​	<strong>简单来说，<strong>Namespace 是 Linux 内核的一个特性，该</strong>特性可以实现在同一主机系统中，对进程 ID、主机名、用户 ID、文件名、网络和进程间通信等资源的隔离</strong>。Docker 利用 Linux 内核的 Namespace 特性，<strong>实现了每个容器的资源相互隔离，从而保证容器内部只能访问到自己 Namespace 的资源</strong>。</p> <p><img src="/images/9.Namespaces%E7%B1%BB%E5%9E%8B.png" alt=""></p> <h3 id="_3-namespace的作用"><a href="#_3-namespace的作用" class="header-anchor">#</a> 3.Namespace的作用</h3> <p>下面分别讲解六种Namespace的运用：
+<strong>1）Mount Namespace</strong>
+​	**Mount Namespace 是 Linux 内核实现的第一个 Namespace，**从内核的 2.4.19 版本开始加入。它可以用来隔离不同的进程或进程组看到的挂载点。通俗地说，就是可以实现在不同的进程中看到不同的挂载目录。使用 Mount Namespace 可以实现容器内只能看到自己的挂载信息，在容器内的挂载操作不会影响主机的挂载目录。</p> <p>​	<strong>unshare</strong> 是 util-linux 工具包中的一个工具，CentOS 7 系统默认已经集成了该工具，使用 unshare 命令可以实现创建并访问不同类型的 Namespace。</p> <p>首先我们使用以下命令创建一个 bash 进程并且新建一个 Mount Namespace：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ sudo unshare --mount --fork /bin/bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>执行完上述命令后，这时我们已经在主机上创建了一个新的 Mount Namespace，并且当前命令行窗口加入了新创建的 Mount Namespace。下面我通过一个例子来验证下，<strong>在独立的 Mount Namespace 内创建挂载目录是不影响主机的挂载目录的。</strong></p> <p>首先在 /tmp 目录下创建一个目录。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# mkdir /tmp/tmpfs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>创建好目录后使用 mount 命令挂载一个 tmpfs 类型的目录。命令如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# mount -t tmpfs -o size=20m tmpfs /tmp/tmpfs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后使用 df 命令查看一下已经挂载的目录信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1       500G  1.4G  499G   1% /
+devtmpfs         16G     0   16G   0% /dev
+tmpfs            16G     0   16G   0% /dev/shm
+tmpfs            16G     0   16G   0% /sys/fs/cgroup
+tmpfs            16G   57M   16G   1% /run
+tmpfs           3.2G     0  3.2G   0% /run/user/1000
+tmpfs            20M     0   20M   0% /tmp/tmpfs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>可以看到 /tmp/tmpfs 目录已经被正确挂载。为了验证主机上并没有挂载此目录，我们新打开一个命令行窗口，同样执行 df 命令查看主机的挂载信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[centos@centos7 ~]$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs         16G     0   16G   0% /dev
+tmpfs            16G     0   16G   0% /dev/shm
+tmpfs            16G   57M   16G   1% /run
+tmpfs            16G     0   16G   0% /sys/fs/cgroup
+/dev/vda1       500G  1.4G  499G   1% /
+tmpfs           3.2G     0  3.2G   0% /run/user/1000
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>通过上面输出可以看到主机上并没有挂载 /tmp/tmpfs，可见我们独立的 Mount Namespace 中执行 mount 操作并不会影响主机。</p> <p>为了进一步验证我们的想法，我们继续在当前命令行窗口查看一下当前进程的 Namespace 信息，命令如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# ls -l /proc/self/ns/
+total 0
+lrwxrwxrwx. 1 root root 0 Sep  4 08:20 ipc -&gt; ipc:[4026531839]
+lrwxrwxrwx. 1 root root 0 Sep  4 08:20 mnt -&gt; mnt:[4026532239]
+lrwxrwxrwx. 1 root root 0 Sep  4 08:20 net -&gt; net:[4026531956]
+lrwxrwxrwx. 1 root root 0 Sep  4 08:20 pid -&gt; pid:[4026531836]
+lrwxrwxrwx. 1 root root 0 Sep  4 08:20 user -&gt; user:[4026531837]
+lrwxrwxrwx. 1 root root 0 Sep  4 08:20 uts -&gt; uts:[4026531838]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>然后新打开一个命令行窗口，使用相同的命令查看一下主机上的 Namespace 信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[centos@centos7 ~]$ ls -l /proc/self/ns/
+total 0
+lrwxrwxrwx. 1 centos centos 0 Sep  4 08:20 ipc -&gt; ipc:[4026531839]
+lrwxrwxrwx. 1 centos centos 0 Sep  4 08:20 mnt -&gt; mnt:[4026531840]
+lrwxrwxrwx. 1 centos centos 0 Sep  4 08:20 net -&gt; net:[4026531956]
+lrwxrwxrwx. 1 centos centos 0 Sep  4 08:20 pid -&gt; pid:[4026531836]
+lrwxrwxrwx. 1 centos centos 0 Sep  4 08:20 user -&gt; user:[4026531837]
+lrwxrwxrwx. 1 centos centos 0 Sep  4 08:20 uts -&gt; uts:[4026531838]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>通过对比两次命令的输出结果，我们可以看到，除了 Mount Namespace 的 ID 值不一样外，其他Namespace 的 ID 值均一致。</p> <p>通过以上结果我们可以得出结论，使用 unshare 命令可以新建 Mount Namespace，并且在新建的 Mount Namespace 内 mount 是和外部完全隔离的。</p> <p><strong>2）PID Namespace</strong>
+​	<strong>PID Namespace 的作用是用来隔离进程</strong>。在不同的 PID Namespace 中，进程可以拥有相同的 PID 号，利用 PID Namespace 可以实现每个容器的主进程为 1 号进程，而容器内的进程在主机上却拥有不同的PID。例如一个进程在主机上 PID 为 122，使用 PID Namespace 可以实现该进程在容器内看到的 PID 为 1。</p> <p>下面演示PID Namespace的作用。创建一个 bash 进程，并且新建一个 PID Namespace：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ sudo unshare --pid --fork --mount-proc /bin/bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>执行完上述命令后，我们在主机上创建了一个新的 PID Namespace，并且当前命令行窗口加入了新创建的 PID Namespace。在当前的命令行窗口使用 ps aux 命令查看一下进程信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0 115544  2004 pts/0    S    10:57   0:00 bash
+root        10  0.0  0.0 155444  1764 pts/0    R+   10:59   0:00 ps aux
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>通过上述命令输出结果可以看到当前 Namespace 下 bash 为 1 号进程，而且我们也看不到主机上的其他进程信息。</p> <p><strong>3）UTS Namespace</strong>
+​	<strong>UTS Namespace 主要是用来隔离主机名的</strong>，它允许每个 UTS Namespace 拥有一个独立的主机名。例如我们的主机名称为 docker，使用 UTS Namespace 可以实现在容器内的主机名称为 utsdocker 或者其他任意自定义主机名。</p> <p>同样我们通过一个实例来验证下 UTS Namespace 的作用，首先我们使用 unshare 命令来创建一个 UTS Namespace：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ sudo unshare --uts --fork /bin/bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>创建好 UTS Namespace 后，当前命令行窗口已经处于一个独立的 UTS Namespace 中，下面我们使用 hostname 命令（hostname 可以用来查看主机名称）设置一下主机名：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>root@centos7 centos]# hostname -b utsdocker
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后再查看一下主机名：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# hostname
+utsdocker
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>通过上面命令的输出，我们可以看到当前UTS Namespace 内的主机名已经被修改为 utsdocker。然后我们新打开一个命令行窗口，使用相同的命令查看一下主机的 hostname：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[centos@centos7 ~]$ hostname
+centos7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>可以看到主机的名称仍然为 centos7，并没有被修改。由此，可以验证 UTS Namespace 可以用来隔离主机名。</p> <p><strong>4）IPC Namespace</strong>
+​	<strong>IPC Namespace 主要是用来隔离进程间通信的</strong>。<strong>PID Namespace 和 IPC Namespace 一起使用可以实现同一 IPC Namespace 内的进程彼此可以通信</strong>，不同 IPC Namespace 的进程却不能通信。</p> <p>使用 unshare 命令来创建一个 IPC Namespace：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ sudo unshare --ipc --fork /bin/bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>下面我们需要借助两个命令来实现对 IPC Namespace 的验证。</p> <ul><li><p>ipcs -q 命令：用来查看系统间通信队列列表。</p></li> <li><p>ipcmk -Q 命令：用来创建系统间通信队列。</p></li></ul> <p>我们首先使用 ipcs -q 命令查看一下当前 IPC Namespace 下的系统通信队列列表：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[centos@centos7 ~]$ ipcs -q
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>由上可以看到当前无任何系统通信队列，然后我们使用 ipcmk -Q 命令创建一个系统通信队列：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# ipcmk -Q
+Message queue id: 0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>再次使用 ipcs -q 命令查看当前 IPC Namespace 下的系统通信队列列表：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# ipcs -q
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+0x73682a32 0          root       644        0            0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>可以看到我们已经成功创建了一个系统通信队列。然后我们新打开一个命令行窗口，使用ipcs -q 命令查看一下主机的系统通信队列：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[centos@centos7 ~]$ ipcs -q
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>通过上面的实验，可以发现，在单独的 IPC Namespace 内创建的系统通信队列在主机上无法看到。即 IPC Namespace 实现了系统通信队列的隔离。</p> <p><strong>5）User Namespace</strong>
+​	<strong>User Namespace 主要是用来隔离用户和用户组的</strong>。一个比较典型的应用场景就是在主机上以非 root 用户运行的进程可以在一个单独的 User Namespace 中映射成 root 用户。使用 User Namespace 可以实现进程在容器内拥有 root 权限，而在主机上却只是普通用户。</p> <p>User Namesapce 的创建是可以不使用 root 权限的。下面我们以普通用户的身份创建一个 User Namespace，命令如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[centos@centos7 ~]$ unshare --user -r /bin/bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>CentOS7 默认允许创建的 User Namespace 为 0，如果执行上述命令失败（ unshare 命令返回的错误为 unshare: unshare failed: Invalid argument ），需要使用以下命令修改系统允许创建的 User Namespace 数量，命令为：echo 65535 &gt; /proc/sys/user/max_user_namespaces，然后再次尝试创建 User Namespace。</p> <p>然后执行 id 命令查看一下当前的用户信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# id
+uid=0(root) gid=0(root) groups=0(root),65534(nfsnobody) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>通过上面的输出可以看到我们在新的 User Namespace 内已经是 root 用户了。下面我们使用只有主机 root 用户才可以执行的 reboot 命令来验证一下，在当前命令行窗口执行 reboot 命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# reboot
+Failed to open /dev/initctl: Permission denied
+Failed to talk to init daemon.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>可以看到，我们在新创建的 User Namespace 内虽然是 root 用户，但是并没有权限执行 reboot 命令。这说明在隔离的 User Namespace 中，并不能获取到主机的 root 权限，也就是说 User Namespace 实现了用户和用户组的隔离。</p> <p><strong>6）Net Namespace</strong>
+​	<strong>Net Namespace 是用来隔离网络设备、IP 地址和端口等信息的</strong>。Net Namespace 可以让每个进程拥有自己独立	的 IP 地址，端口和网卡信息。例如主机 IP 地址为 172.16.4.1 ，容器内可以设置独立的 IP 地址为 192.168.1.1。</p> <p>同样用实例验证，我们首先使用 ip a 命令查看一下主机上的网络信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ ip a
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 02:11:b0:14:01:0c brd ff:ff:ff:ff:ff:ff
+    inet 172.20.1.11/24 brd 172.20.1.255 scope global dynamic eth0
+       valid_lft 86063337sec preferred_lft 86063337sec
+    inet6 fe80::11:b0ff:fe14:10c/64 scope link
+       valid_lft forever preferred_lft forever
+3: docker0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:82:8d:a0:df brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:82ff:fe8d:a0df/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>然后我们使用以下命令创建一个 Net Namespace：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ sudo unshare --net --fork /bin/bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>同样的我们使用 ip a 命令查看一下网络信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 centos]# ip a
+1: lo: &lt;LOOPBACK&gt; mtu 65536 qdisc noop state DOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>可以看到，宿主机上有 lo、eth0、docker0 等网络设备，而我们新建的 Net Namespace 内则与主机上的网络设备不同。</p> <h3 id="_4-总结"><a href="#_4-总结" class="header-anchor">#</a> 4. 总结</h3> <p>​	Linux 内核从 2002 年 2.4.19 版本开始加入了 Mount Namespace，而直到内核 3.8 版本加入了 User Namespace 才为容器提供了足够的支持功能。</p> <p>​	当 Docker 新建一个容器时， 它会创建这六种 Namespace，然后将容器中的进程加入这些 Namespace 之中，使得 Docker 容器中的进程只能看到当前 Namespace 中的系统资源。</p> <p>​	正是由于 Docker 使用了 Linux 的这些 Namespace 技术，才实现了 Docker 容器的隔离，可以说没有 Namespace，就没有 Docker 容器。</p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><div class="reco-bgm-panel" data-v-39f9e6e0><audio id="bgm" src="/blog/audio/DancingWithYourGhost.mp3" data-v-39f9e6e0></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><img src="/blog/images/DancingWithYourGhost.jpg" data-v-39f9e6e0></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:99999;" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><div class="reco-bgm-cover" style="background-image:url(/blog/images/DancingWithYourGhost.jpg);" data-v-39f9e6e0><div class="mini-operation" style="display:none;" data-v-39f9e6e0><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-39f9e6e0></i></div> <div class="falut-message" style="display:none;" data-v-39f9e6e0>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><div class="info-box" data-v-39f9e6e0><i class="reco-bgm reco-bgm-music music" data-v-39f9e6e0></i>Sasha Sloan - Dancing With Your Ghost</div> <div class="info-box" data-v-39f9e6e0><i class="reco-bgm reco-bgm-artist" data-v-39f9e6e0></i>Sasha Sloan</div> <div class="reco-bgm-progress" data-v-39f9e6e0><div class="progress-bar" data-v-39f9e6e0><div class="bar" data-v-39f9e6e0></div></div></div> <div class="reco-bgm-operation" data-v-39f9e6e0><i class="reco-bgm reco-bgm-last last" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-play play" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-next next" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-39f9e6e0></i> <div class="volume-bar" data-v-39f9e6e0><div class="bar" data-v-39f9e6e0></div></div></div></div> <div class="reco-bgm-left-box" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><i class="reco-bgm reco-bgm-left" data-v-39f9e6e0></i></div></div></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:10px;bottom:190px;display:none;" data-v-5775ee02>
+      luna-message
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div></div></div>
+    <script src="/blog/assets/js/app.40b1cfc1.js" defer></script><script src="/blog/assets/js/3.856b35cc.js" defer></script><script src="/blog/assets/js/1.a8a0dfd8.js" defer></script><script src="/blog/assets/js/37.cee246a5.js" defer></script>
+  </body>
+</html>
