@@ -8,7 +8,7 @@ categories:
  - 通讯
 ---
 
-![nginx](/img/nginx.jpg)
+![nginx](/blog/img/nginx.jpg)
 
 NGINX联合创始人安德鲁·阿列克谢夫（Andrew Alexeev）曾说：NGINX是为对Apache性能不满意的人而构建的。随着Internet需求的变化，Web服务器的工作也在变化。NGINX的构建比以往任何时候都更有效率，更可扩展，更安全，更强大。
 
@@ -48,9 +48,9 @@ yum -y install wget httpd-tools vim
 
 `Nginx`是一个高性能的`http`和反向代理服务器，其特点是占用内存小，并发能力强。`Nginx`专为性能优化而开发，性能是其最重要的考量，能经受高负载的考验，有报告表明能支持高达50000个并发连接数。
 
-[![img](/img/nginx-1.jpg)](/img/nginx-1.jpg)
+![](/blog/img/nginx-1.jpg)
 
-**2.2正向代理与反向代理**
+**2.2正向代理与反向代**
 
 为了便于理解，首先先来了解一下一些基础知识，nginx是一个高性能的反向代理服务器那么什么是反向代理呢？
 
@@ -58,7 +58,7 @@ yum -y install wget httpd-tools vim
 
 不管是正向代理还是反向代理，实现的都是上面的功能。如果你对OSI 七层模型与 TCP/IP 四层模型不是很熟悉可以再回顾下。
 
-[![img](/img/nginx-2.jpg)](/img/nginx-2.jpg)
+![](/blog/img/nginx-2.jpg)
 
 > **正向代理**
 
@@ -287,7 +287,7 @@ http {
 
 下面是 nginx 一些配置中常用的内置全局变量，你可以在配置的任何位置使用它们。
 
-![img](https://segmentfault.com/img/remote/1460000037429939)
+![](/blog/img/nginx-3.jpg)
 
 **六.Nginx实战**
 
