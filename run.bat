@@ -1,3 +1,3 @@
 @echo off
-vuepress dev docs
+D:\OfficeSoftware\cmder\Cmder.exe vuepress dev docs
 pause

@@ -48,7 +48,7 @@ yum -y install wget httpd-tools vim
 
 `Nginx`是一个高性能的`http`和反向代理服务器，其特点是占用内存小，并发能力强。`Nginx`专为性能优化而开发，性能是其最重要的考量，能经受高负载的考验，有报告表明能支持高达50000个并发连接数。
 
-[![img](C:\Users\improve\Desktop\nginx-1.jpg)](/img/nginx-1.jpg)
+[![img](/img/nginx-1.jpg)](/img/nginx-1.jpg)
 
 **2.2正向代理与反向代理**
 
@@ -58,7 +58,7 @@ yum -y install wget httpd-tools vim
 
 不管是正向代理还是反向代理，实现的都是上面的功能。如果你对OSI 七层模型与 TCP/IP 四层模型不是很熟悉可以再回顾下。
 
-[![img](C:\Users\improve\Desktop\nginx-2.jpg)](/img/nginx-2.jpg)
+[![img](/img/nginx-2.jpg)](/img/nginx-2.jpg)
 
 > **正向代理**
 
