@@ -8,7 +8,7 @@ categories:
  - 通讯
 ---
 
-[![img](https://segmentfault.com/img/remote/1460000027079688)](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1463291332122017795&__biz=MzI0MDQ4MTM5NQ==#wechat_redirect)
+![nginx](/img/nginx.jpg)
 
 NGINX联合创始人安德鲁·阿列克谢夫（Andrew Alexeev）曾说：NGINX是为对Apache性能不满意的人而构建的。随着Internet需求的变化，Web服务器的工作也在变化。NGINX的构建比以往任何时候都更有效率，更可扩展，更安全，更强大。
 
@@ -48,7 +48,7 @@ yum -y install wget httpd-tools vim
 
 `Nginx`是一个高性能的`http`和反向代理服务器，其特点是占用内存小，并发能力强。`Nginx`专为性能优化而开发，性能是其最重要的考量，能经受高负载的考验，有报告表明能支持高达50000个并发连接数。
 
-[![img](https://segmentfault.com/img/remote/1460000037429937)](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1463291332122017795&__biz=MzI0MDQ4MTM5NQ==#wechat_redirect)
+[![img](C:\Users\improve\Desktop\nginx-1.jpg)](/img/nginx-1.jpg)
 
 **2.2正向代理与反向代理**
 
@@ -58,7 +58,7 @@ yum -y install wget httpd-tools vim
 
 不管是正向代理还是反向代理，实现的都是上面的功能。如果你对OSI 七层模型与 TCP/IP 四层模型不是很熟悉可以再回顾下。
 
-[![img](https://segmentfault.com/img/remote/1460000037429938)](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1463291332122017795&__biz=MzI0MDQ4MTM5NQ==#wechat_redirect)
+[![img](C:\Users\improve\Desktop\nginx-2.jpg)](/img/nginx-2.jpg)
 
 > **正向代理**
 
