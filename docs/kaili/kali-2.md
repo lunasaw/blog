@@ -30,13 +30,13 @@ categories:
 
    `apt-get update`
 
-   ![img](/img/img/2-1-1.jpg)
+   ![img](/blog/img/img/2-1-1.jpg)
 
 2. 下面，我们需要再次使用`apt-get`来准备内核头文件，执行下列命令：
 
    `apt-get install linux-headers - `uname –r``
 
-   ![img](/img/img/2-1-2.jpg)
+   ![img](/blog/img/img/2-1-2.jpg)
 
 3. 复制下列目录以及其中的全部内容：
 
@@ -60,7 +60,7 @@ categories:
 
    `cd /tmp/ wget http://www.broadcom.com/docs/linux_sta/hybrid-portsrc_ x86_64-v5_100_82_112.tar.gz`
 
-   ![img](/img/img/2-2-1.jpg)
+   ![img](/blog/img/img/2-2-1.jpg)
 
 2. 使用下列命令解压下载的驱动：
 
@@ -134,13 +134,13 @@ categories:
 
    我们也可以从下面的网址下载显示驱动：[http://support. amd.com/us/gpudownload/Pages/index.aspx](http://support. amd.com/us/gpudownload/Pages/index.aspx)。
 
-   ![img](/img/img/2-3-1.jpg)
+   ![img](/blog/img/img/2-3-1.jpg)
 
 2. 通过键入下列命令来开始安装：
 
    `sh amd-driver-installer-12-1-x86.x86_64.run`
 
-   ![img](/img/img/2-3-2.jpg)
+   ![img](/blog/img/img/2-3-2.jpg)
 
 3. 在安装完成之后，重启你的系统来使改变生效，并且避免不稳定。
 
@@ -230,7 +230,7 @@ categories:
 
    `cd /tmp/ wget http://developer.download.nvidia.com/compute/cuda/4_1/rel/ drivers/NVIDIA-Linux-x86_64-285.05.33.run`
 
-   ![img](/img/img/2-4-1.jpg)
+   ![img](/blog/img/img/2-4-1.jpg)
 
 2. 安装驱动：
 
@@ -336,11 +336,11 @@ categories:
 
 2. 解除我们打算使用的链接类型的注释，这里是`dynamic_chain`：
 
-   ![img](/img/img/2-6-1.jpg)
+   ![img](/blog/img/img/2-6-1.jpg)
 
 3. 向列表中添加一些代理服务器：
 
-   ![img](/img/img/2-6-2.jpg)
+   ![img](/blog/img/img/2-6-2.jpg)
 
 4. 使用我们的链式代理来解析目标主机：
 
@@ -358,13 +358,13 @@ categories:
 
 1. 通过访问`Applications Menu | Kali | Forensics | Digital Anti Forensics | install truecrypt`来安装TrueCrypt。
 
-   ![img](/img/img/2-7-1.jpg)
+   ![img](/blog/img/img/2-7-1.jpg)
 
    点击`Install TrueCrypt`（安装TrueCrypt）并且遵循屏幕上的指导。
 
 2. 从`Applications Menu | Kali Linux | Forensics | Digital Anti Forensics | truecrypt`运行TrueCrypt，你会看到下面的窗口：
 
-   ![img](/img/img/2-7-2.jpg)
+   ![img](/blog/img/img/2-7-2.jpg)
 
 3. 点击`Create Volume`（新建卷）来启动`TrueCrypt Volume Creation Wizard`（TrueCrypt卷创建向导）。
 
@@ -374,7 +374,7 @@ categories:
 
 6. 点击`Select File…`（选择文件）按钮并为新的TrueCrypt卷指定名称和路径。完成后点击`Save`（保存）。
 
-   ![img](/img/img/2-7-3.jpg)
+   ![img](/blog/img/img/2-7-3.jpg)
 
 7. 点击`Next`按钮并选择打算使用的加密和哈希算法。
 
@@ -396,7 +396,7 @@ categories:
 
 16. 点击`Mount`（挂载）并键入我们的密码，完成后点击`OK`。
 
-    ![img](/img/img/2-7-4.jpg)
+    ![img](/blog/img/img/2-7-4.jpg)
 
 17. 我们现在可以通过在槽上双击或通过挂载目录来访问卷，以及在里面保存文件。当我们完成之后，只需要点击`Dismount All`（解除所有挂载）。
 

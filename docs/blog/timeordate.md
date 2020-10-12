@@ -1,7 +1,7 @@
 ---
 title: 时间和字符传的转化
 date: 2020-04-13
-banner_img: /img/java2.jpg
+banner_img: /blog/img/java2.jpg
 tags: 
  - date
 categories:

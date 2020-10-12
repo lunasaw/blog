@@ -17,7 +17,7 @@ heroImageStyle: {
 # actionLink: /guide/
 features:
 - title: xx
-  details: 铭记昨天
+  details: 回忆昨天
 - title: xx
   details: 珍惜今天
 - title: xx
@@ -35,9 +35,9 @@ footer: MIT Licensed | Copyright © 2019-2020 luna-blog
 ::: details
 > 说明
 
-- 
-- 
-- 
+- https://luna_nov.gitee.io/blog
+- https://czy1024.github.io/
+- https://czy1024.github.io/blog
 
 :::
 

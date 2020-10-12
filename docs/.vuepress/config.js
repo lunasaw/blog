@@ -5,6 +5,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
       title: 'luna-blog',
+	  port: 8086,
       description: '一枚"即将"成型的程序猿.大三生'
     }
   },

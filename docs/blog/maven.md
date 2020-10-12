@@ -1,7 +1,7 @@
 ---
 title: maven配置学习
 date: 2020-07-27
-banner_img: /img/Pikachu.jpg
+banner_img: /blog/img/Pikachu.jpg
 tags: 
  - maven
 categories:

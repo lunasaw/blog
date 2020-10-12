@@ -27,7 +27,7 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
 1. 在开始菜单中，选择`Applications | Kali Linux | Password Attacks | Online Attacks | hydra-gtk`。
 
-   ![/img/img](/img/img/8-1-1.jpg)
+   ![/img/img](/blog/img/img/8-1-1.jpg)
 
 2. 既然我们已经把 Hydra 打开了，我们需要设置我们的单词列表。点击`Passwords`（密码）标签页。我们需要使用用户名列表和密码列表。输入你的用户名和密码列表的位置。同时选择`Loop around users`（循环使用用户名）和`Try empty password`（尝试空密码）。
 
@@ -36,19 +36,19 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
    > 你可以使用的快捷方式是，点击单词列表框来打开文件系统窗口。
 
-   ![/img/img](/img/img/8-1-2.jpg)
+   ![/img/img](/blog/img/img/8-1-2.jpg)
 
 3. 下面，我们要做一些调整。在`Performance Options`（执行选项）下面，我们将任务数量从 16 设置为 2。原因是我们不打算让这么多进程运行，这样会使服务器崩溃。虽然它是可选的，我们也希望选择`Exit after first found pair`（在首次发现匹配之后退出）选项。
 
-   ![/img/img](/img/img/8-1-3.jpg)
+   ![/img/img](/blog/img/img/8-1-3.jpg)
 
 4. 最后，我们要设置我们的目标。点击`Target`（目标）标签页并设置我们的目标和协议。这里，我们使用 Metasploitable 主机（`192.168.10.111`）的 MySQL 端口。
 
-   ![/img/img](/img/img/8-1-4.jpg)
+   ![/img/img](/blog/img/img/8-1-4.jpg)
 
 5. 最后我们点击`Start`（开始）标签页的`Start`按钮来启动攻击。
 
-   ![/img/img](/img/img/8-1-5.jpg)
+   ![/img/img](/blog/img/img/8-1-5.jpg)
 
 ### 工作原理
 
@@ -68,7 +68,7 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
 1. 在开始菜单中，选择`Applications | Kali Linux | Password Attacks | Online Attacks | hydra-gtk`。
 
-   ![/img/img](/img/img/8-2-1.jpg)
+   ![/img/img](/blog/img/img/8-2-1.jpg)
 
 2. 既然我们已经把 Hydra 打开了，我们需要设置我们的单词列表。点击`Passwords`（密码）标签页。我们需要使用用户名列表和密码列表。输入你的用户名和密码列表的位置。同时选择`Loop around users`（循环使用用户名）和`Try empty password`（尝试空密码）。
 
@@ -77,19 +77,19 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
    > 你可以使用的快捷方式是，点击单词列表框来打开文件系统窗口。
 
-   ![/img/img](/img/img/8-2-2.jpg)
+   ![/img/img](/blog/img/img/8-2-2.jpg)
 
 3. 下面，我们要做一些调整。在`Performance Options`（执行选项）下面，我们将任务数量从 16 设置为 2。原因是我们不打算让这么多进程运行，这样会使服务器崩溃。虽然它是可选的，我们也希望选择`Exit after first found pair`（在首次发现匹配之后退出）选项。
 
-   ![/img/img](/img/img/8-2-3.jpg)
+   ![/img/img](/blog/img/img/8-2-3.jpg)
 
 4. 最后，我们要设置我们的目标。点击`Target`（目标）标签页并设置我们的目标和协议。这里，我们使用 Metasploitable 主机（`192.168.10.111`）的 HTTP 端口。
 
-   ![/img/img](/img/img/8-2-4.jpg)
+   ![/img/img](/blog/img/img/8-2-4.jpg)
 
 5. 最后我们点击`Start`（开始）标签页的`Start`按钮来启动攻击。
 
-   ![/img/img](/img/img/8-2-5.jpg)
+   ![/img/img](/blog/img/img/8-2-5.jpg)
 
 ## 8.3 获得路由访问
 
@@ -105,7 +105,7 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
 1. 在开始菜单中，访问`Applications | Kali Linux | Password Attacks | Online Attacks | medusa`。当 Medusa 启动后，它会加载`help`（帮助）文件。
 
-   ![/img/img](/img/img/8-3-1.jpg)
+   ![/img/img](/blog/img/img/8-3-1.jpg)
 
 2. 我们现在已选定的选项来云顶 Medusa。
 
@@ -119,7 +119,7 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
    - `-n 80`允许我们指定端口号码。这里我们选择了`80`。
    - `-F`允许我们在成功找到用户名密码组合之后停止爆破。
 
-   ![/img/img](/img/img/8-3-2.jpg)
+   ![/img/img](/blog/img/img/8-3-2.jpg)
 
 3. Medusa 会运行，并尝试所有用户名和密码组合，直到某次成功。
 
@@ -184,51 +184,51 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
 2. 将`ec_uid`和`ec_gid`改为`0`。
 
-   ![/img/img](/img/img/8-4-1.jpg)
+   ![/img/img](/blog/img/img/8-4-1.jpg)
 
 3. 下面我们需要取消下面的 IPTABLES 行的注释。它在靠近文件末尾的`LINUX`一节。
 
-   ![/img/img](/img/img/8-4-2.jpg)
+   ![/img/img](/blog/img/img/8-4-2.jpg)
 
 4. 现在，我们将要启动 Ettercap。使用`-G`选项，加载图形化界面（GUI）。
 
-   ![/img/img](/img/img/8-4-3.jpg)
+   ![/img/img](/blog/img/img/8-4-3.jpg)
 
 5. 我们开启统一嗅探。你可以按下`Shift + U`或者访问菜单栏中的`Sniff | Unified sniffing...`。
 
-   ![/img/img](/img/img/8-4-4.jpg)
+   ![/img/img](/blog/img/img/8-4-4.jpg)
 
 6. 选择网络接口。
 
-   ![/img/img](/img/img/8-4-5.jpg)
+   ![/img/img](/blog/img/img/8-4-5.jpg)
 
 7. 下面，我们开始`Scan for hosts`（扫描主机），这可以通过按下`Ctrl + S`或访问菜单栏的`Hosts | Scan for hosts`来完成。
 
-   ![/img/img](/img/img/8-4-6.jpg)
+   ![/img/img](/blog/img/img/8-4-6.jpg)
 
 8. 现在我们能够让 Ettercap 开始嗅探了。你可以按下`Ctrl + W`或访问菜单栏的`Start | Start Sniffing`（开始嗅探）。
 
-   ![/img/img](/img/img/8-4-7.jpg)
+   ![/img/img](/blog/img/img/8-4-7.jpg)
 
 9. 最后，我们开始进行 ARP 毒化。访问菜单栏的`Mitm | Arp poisoning`（ARP 毒化）。
 
-   ![/img/img](/img/img/8-4-8.jpg)
+   ![/img/img](/blog/img/img/8-4-8.jpg)
 
 10. 在出现的窗口中，选中`Sniff remote connections`（嗅探远程连接）的选项。
 
-    ![/img/img](/img/img/8-4-9.jpg)
+    ![/img/img](/blog/img/img/8-4-9.jpg)
 
 11. 取决于网络情况，我们会看到信息。
 
-    ![/img/img](/img/img/8-4-10.jpg)
+    ![/img/img](/blog/img/img/8-4-10.jpg)
 
 12. 一旦我们找到了我们想找的信息（用户名和密码）。我们会关闭 Ettercap。你可以按下`Ctrl + E`或者访问菜单栏的`Start | Stop sniffing`（停止嗅探）来完成。
 
-    ![/img/img](/img/img/8-4-11.jpg)
+    ![/img/img](/blog/img/img/8-4-11.jpg)
 
 13. 现在我们需要关闭 ARP 毒化来使网络恢复正常。
 
-    ![/img/img](/img/img/8-4-12.jpg)
+    ![/img/img](/blog/img/img/8-4-12.jpg)
 
 ### 工作原理
 
@@ -246,7 +246,7 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
    `search email collector`
 
-   ![/img/img](/img/img/8-4-13.jpg)
+   ![/img/img](/blog/img/img/8-4-13.jpg)
 
 3. 键入下列命令来使用搜索邮件收集器模块：
 
@@ -256,7 +256,7 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
    `show options`
 
-   ![/img/img](/img/img/8-4-14.jpg)
+   ![/img/img](/blog/img/img/8-4-14.jpg)
 
 5. 下面我们设置域名。如果不想被有关部门查水表的话，请小心选择域名。
 
@@ -268,13 +268,13 @@ Hydra 支持许多协议，包括（但不仅限于）FTP、HTTP、HTTPS、MySQL
 
    `set outfile /root/Desktop/fromwillie.txt`
 
-   ![/img/img](/img/img/8-4-15.jpg)
+   ![/img/img](/blog/img/img/8-4-15.jpg)
 
 8. 最后，我们开始攻击。
 
    `run`
 
-   ![/img/img](/img/img/8-4-16.jpg)
+   ![/img/img](/blog/img/img/8-4-16.jpg)
 
 ## 8.5 使用 John the Ripper 破解 Windows 密码
 
@@ -340,7 +340,7 @@ Kali 的好处是已经安装了 Crunch，不像 BackTrack。
 
    `crunch`
 
-   ![/img/img](/img/img/8-6-1.jpg)
+   ![/img/img](/blog/img/img/8-6-1.jpg)
 
 2. 使用 Crunch 生成密码的基本语法是，`[minimum length] [maximum length] [character set] [options]`。
 
@@ -355,7 +355,7 @@ Kali 的好处是已经安装了 Crunch，不像 BackTrack。
 
    `crunch 8 10 ABCDEFGabcdefg0123456789 –o /root/Desktop/ generatedCrunch.txt`
 
-   ![/img/img](/img/img/8-6-2.jpg)
+   ![/img/img](/blog/img/img/8-6-2.jpg)
 
 5. 一旦生成了文件，我们使用 Nano 来打开文件：
 
@@ -375,13 +375,13 @@ Kali 的好处是已经安装了 Crunch，不像 BackTrack。
 
    `cd /usr/share/rainbowcrack/`
 
-   ![/img/img](/img/img/8-7-1.jpg)
+   ![/img/img](/blog/img/img/8-7-1.jpg)
 
 2. 下面我们要启动`rtgen`来生成基于 MD5 的彩虹表。
 
    `./rtgen md5 loweralpha-numeric 1 5 0 3800 33554432 0`
 
-   ![/img/img](/img/img/8-7-2.jpg)
+   ![/img/img](/blog/img/img/8-7-2.jpg)
 
 3. 一旦彩虹表生成完毕，你的目录会包含`.rt`文件。这取决于用于生成哈希的处理器数量，大约需要 2~7 个小时。
 
@@ -405,7 +405,7 @@ Kali 的好处是已经安装了 Crunch，不像 BackTrack。
 
    `cd /usr/share/oclhashcat-plus`
 
-   ![/img/img](/img/img/8-8-1.jpg)
+   ![/img/img](/blog/img/img/8-8-1.jpg)
 
 2. 执行下列命令来启动 CudaHashcat-plus 的帮助文件：
 
@@ -455,7 +455,7 @@ Kali 的好处是已经安装了 Crunch，不像 BackTrack。
 
    `cd /usr/share/oclhashcat-plus`
 
-   ![/img/img](/img/img/8-9-1.jpg)
+   ![/img/img](/blog/img/img/8-9-1.jpg)
 
 2. 执行下列命令来启动 OclHashcat-plus 的帮助文件：
 

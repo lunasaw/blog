@@ -1,7 +1,7 @@
 ---
 title: IDEA插件
 date: 2020-04-13
-banner_img: /img/idea.jpg
+banner_img: /blog/img/idea.jpg
 tags: 
  - idea
 categories:
