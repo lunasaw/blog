@@ -27,7 +27,7 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
 # git push -f http://github.z01.com/waipo/waipo.git master:gh-pages
-git push -f https://github.com/luna_nov/blog.git master:master
+git push  https://github.com/luna_nov/blog.git master
 
 
 # 返回到上一次的工作目录
