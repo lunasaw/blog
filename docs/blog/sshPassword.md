@@ -23,7 +23,7 @@ categories:
 
 # 3、ssh登录原理过程
 
-![img](https://img-blog.csdn.net/20170706191949062?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc1OTAxMzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![/blog/img/ssh/ssh-2.png](/blog/img/ssh/ssh-2.png)
 
 这里看不懂也没关系，楼主详解一番：
 
@@ -61,7 +61,7 @@ node2回复node1：连接建立成功！
 
 ssh配置中，会用到下面几个文件：
 
-![img](https://img-blog.csdn.net/20170706192317720?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc1OTAxMzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![/blog/img/ssh/ssh-1.png](/blog/img/ssh/ssh-1.png)
 
 恩~毫无PS痕迹。。。
 
@@ -141,7 +141,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub 用户名@ip
 
 ## 5.2、报错
 
-![img](https://img-blog.csdn.net/20170706200610227)
+![/blog/img/ssh/ssh-3.png](/blog/img/ssh/ssh-3.png)
 
 解决：相关目录权限不对，一下列出相关权限。读者根据具体去修改
 
@@ -157,6 +157,6 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub 用户名@ip
 
 解决： vi   /etc/ssh/sshd_config
 
-![img](https://img-blog.csdn.net/20170706203836282)
+![/blog/img/ssh/ssh-4.png](/blog/img/ssh/ssh-4.png)
 
 这三项需要注释掉，按博主图片中这样就好。
