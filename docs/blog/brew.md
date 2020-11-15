@@ -6,6 +6,7 @@ tags:
  - Mac-brew
 categories:
  - 日志
+
 ---
 
 ## homebrew
@@ -67,8 +68,6 @@ categories:
 
 安装完成后输入 `brew -v` 即可显示是否安装成功：
 
-
-
 ```undefined
 Homebrew 2.1.9
 Homebrew/homebrew-core (git revision 84988; last commit 2019-07-29)
@@ -77,8 +76,6 @@ Homebrew/homebrew-core (git revision 84988; last commit 2019-07-29)
 ## 2、手动安装
 
 执行如下命令：
-
-
 
 ```cpp
 mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
@@ -96,6 +93,7 @@ mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar 
 
 ## 1、安装卸载软件
 
+```bash
 1. `brew --version` 或者 `brew -v` 显示brew版本信息
 2. `brew install <formula>` 安装指定软件
 3. `brew uninstall <formula>` 卸载指定软件
@@ -107,9 +105,11 @@ mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar 
 9. `brew install <formula> --build-from-source` 源码安装指定软件，可以给定指定参数
 10. `brew commands`  列出所有可用命令
 11. brew link <apps> 添加路径
+```
 
 ## 2、升级软件相关
 
+```bash
 1. `brew update` 自动升级homebrew （从github下载最新版本）
 2. `brew outdated` 检测已经过时的软件
 3. `brew upgrade` 升级所有已过时的软件，即列出的以过时软件
@@ -123,9 +123,13 @@ mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar 
 11. `brew untap <user/repo>`  删除仓库
 12. `brew deps <formula>` 查看指定软件依赖于哪些软件
 13. `brew uses <formula>` 查看指定软件被哪些软件所依赖
+```
+
+
 
 ## 3、清理相关
 
+```bash
 homebrew再升级软件时候不会清理相关的旧版本，在软件升级后我们可以使用如下命令清理
 
 1. `brew cleanup -n` 列出需要清理的内容
@@ -136,6 +140,9 @@ homebrew再升级软件时候不会清理相关的旧版本，在软件升级后
 
 通过brew安装的文件会自动设置环境变量，所以不用担心命令行不能启动的问题。
  比如安装好了gradle，即可运行 `gradle -v`
+```
+
+
 
 ## 3、brew services管理后台服务
 
@@ -152,17 +159,13 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 如使用 `brew service` 可以简化为:
 
-
-
 ```undefined
 brew services start mysql
 ```
 
 - services 常用命令
 
-
-
-```php
+```bash
 brew services list  # 查看使用brew安装的服务列表
 
 brew services run formula|--all  # 启动服务（仅启动不注册）
@@ -178,16 +181,12 @@ brew services cleanup  # 清除已卸载应用的无用的配置
 
 - 配置文件目录
 
-
-
 ```ruby
 /Library/LaunchDaemons # 开机自启，需要sudo
 ~/Library/LaunchAgents # 用户登录后自启
 ```
 
 以homebrew.mxcl.kafka.plist为例：
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -221,9 +220,7 @@ brew services cleanup  # 清除已卸载应用的无用的配置
 
 Homebrew Cask 是 Homebrew 的扩展，借助它可以方便地在 macOS 上安装图形界面程序，即我们常用的各类应用。Homebrew 中文含义为自制、自酿酒，Cask 中文含义为桶、木桶，桶装酒是一种成品，也就是说每一个 homebrew cask 都可以直接使用的，比如 Atom 的 Cask 名称为 atom，那么就可以使用如下命令安装：
 
-
-
-```undefined
+```bash
 brew cask install atom
 ```
 
@@ -238,6 +235,7 @@ brew cask install atom
 
 #### 使用 Homebrew Cask
 
+```bash
 github使用：[https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2FHomebrew%2Fhomebrew-cask%2Fblob%2Fmaster%2FUSAGE.md)
 
 1. `brew cask install <formula>`  安装指定图形界面软件
@@ -248,6 +246,7 @@ github使用：[https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md](
 6. 其它可以参考：[https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2FHomebrew%2Fhomebrew-cask%2Fblob%2Fmaster%2FUSAGE.md)
 
 举例可安装的软件
+```
 
 
 
