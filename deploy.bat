@@ -1,9 +1,4 @@
 @echo off
-
-echo building...
-call build.bat
-echo building-complete.
-
 git init
 git add -A
 git commit -m 'auto-deploy'
