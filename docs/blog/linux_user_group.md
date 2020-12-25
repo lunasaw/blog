@@ -1,5 +1,5 @@
 ---
-title: linux_user_group命令
+title: linux_user_group
 date: 2020-12-25
 banner_img: /img/java1.jpg
 tags: 

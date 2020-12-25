@@ -1,3 +1,12 @@
+---
+title: linux_systemctl
+date: 2020-04-02
+banner_img: /img/java1.jpg
+tags: 
+ - linux
+categories:
+ - 日志
+---
 # systemctl配置管理文件详解
 
 - 文件存放位置：（共三处）
