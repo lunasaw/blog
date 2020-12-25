@@ -15,7 +15,6 @@ categories:
 
 ```bash
 groupadd -g 777 admin
-1
 ```
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623220944164.png)
@@ -33,7 +32,6 @@ groupadd -g 777 admin
 
 ```bash
 useradd -g admin crane
-1
 ```
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062322143654.png)
@@ -44,7 +42,6 @@ useradd -g admin crane
 
 ```bash
 passwd crane
-1
 ```
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623221658719.png)
@@ -56,7 +53,6 @@ passwd crane
 
 ```bash
 visudo
-1
 ```
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623222751147.png)
@@ -67,7 +63,6 @@ visudo
 
 ```bash
 su crane
-1
 ```
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623221911376.png)
@@ -108,4 +103,3 @@ usermod [-LU][-c <备注>][-d <登入目录>][-e <有效期限>][-f <缓冲天�
 # usermod -u 777 root
 ```
 
-### 
