@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>linux_crontabs | luna-blog</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="一枚"即将"成型的程序猿.大三生">
+    <link rel="preload" href="/blog/assets/css/0.styles.318dd407.css" as="style"><link rel="preload" href="/blog/assets/js/app.55b30f78.js" as="script"><link rel="preload" href="/blog/assets/js/3.15f56079.js" as="script"><link rel="preload" href="/blog/assets/js/1.9ec5a713.js" as="script"><link rel="preload" href="/blog/assets/js/25.01bb3c04.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.bcfa6a6d.js"><link rel="prefetch" href="/blog/assets/js/11.d6264aaa.js"><link rel="prefetch" href="/blog/assets/js/12.efc85ab7.js"><link rel="prefetch" href="/blog/assets/js/13.49d6cba6.js"><link rel="prefetch" href="/blog/assets/js/14.17a03aae.js"><link rel="prefetch" href="/blog/assets/js/15.e8b5df9d.js"><link rel="prefetch" href="/blog/assets/js/16.14d54f3a.js"><link rel="prefetch" href="/blog/assets/js/17.3ccc7e19.js"><link rel="prefetch" href="/blog/assets/js/18.83a98039.js"><link rel="prefetch" href="/blog/assets/js/19.5310689e.js"><link rel="prefetch" href="/blog/assets/js/20.26e53b7e.js"><link rel="prefetch" href="/blog/assets/js/21.430e2262.js"><link rel="prefetch" href="/blog/assets/js/22.00fc0a3f.js"><link rel="prefetch" href="/blog/assets/js/23.3aaccb9b.js"><link rel="prefetch" href="/blog/assets/js/24.bdd8f430.js"><link rel="prefetch" href="/blog/assets/js/26.0f16a283.js"><link rel="prefetch" href="/blog/assets/js/27.6204bc94.js"><link rel="prefetch" href="/blog/assets/js/28.36aa724c.js"><link rel="prefetch" href="/blog/assets/js/29.db71480c.js"><link rel="prefetch" href="/blog/assets/js/30.415326d3.js"><link rel="prefetch" href="/blog/assets/js/31.60d96385.js"><link rel="prefetch" href="/blog/assets/js/32.0260d455.js"><link rel="prefetch" href="/blog/assets/js/33.35c478db.js"><link rel="prefetch" href="/blog/assets/js/34.14cbd9bb.js"><link rel="prefetch" href="/blog/assets/js/35.24cc8a59.js"><link rel="prefetch" href="/blog/assets/js/36.c8f21c8a.js"><link rel="prefetch" href="/blog/assets/js/37.0dec3045.js"><link rel="prefetch" href="/blog/assets/js/38.0a1b3bc9.js"><link rel="prefetch" href="/blog/assets/js/39.6d85cf1b.js"><link rel="prefetch" href="/blog/assets/js/4.d94fdc0b.js"><link rel="prefetch" href="/blog/assets/js/40.40fc953b.js"><link rel="prefetch" href="/blog/assets/js/41.9c21d3b0.js"><link rel="prefetch" href="/blog/assets/js/42.e0767f45.js"><link rel="prefetch" href="/blog/assets/js/43.a48a3708.js"><link rel="prefetch" href="/blog/assets/js/44.ed88e794.js"><link rel="prefetch" href="/blog/assets/js/45.72679554.js"><link rel="prefetch" href="/blog/assets/js/46.8446a31b.js"><link rel="prefetch" href="/blog/assets/js/47.346e433e.js"><link rel="prefetch" href="/blog/assets/js/48.eb8b46b0.js"><link rel="prefetch" href="/blog/assets/js/49.a9b87d59.js"><link rel="prefetch" href="/blog/assets/js/5.0d125e67.js"><link rel="prefetch" href="/blog/assets/js/50.f0b9aba6.js"><link rel="prefetch" href="/blog/assets/js/51.47cb883d.js"><link rel="prefetch" href="/blog/assets/js/52.448ecd92.js"><link rel="prefetch" href="/blog/assets/js/53.c2e8f4ba.js"><link rel="prefetch" href="/blog/assets/js/54.1dc73462.js"><link rel="prefetch" href="/blog/assets/js/55.6c9ea40e.js"><link rel="prefetch" href="/blog/assets/js/56.641ce937.js"><link rel="prefetch" href="/blog/assets/js/57.74280c64.js"><link rel="prefetch" href="/blog/assets/js/58.a3c6997f.js"><link rel="prefetch" href="/blog/assets/js/59.2e43f081.js"><link rel="prefetch" href="/blog/assets/js/6.75caacec.js"><link rel="prefetch" href="/blog/assets/js/60.93e72367.js"><link rel="prefetch" href="/blog/assets/js/61.85816576.js"><link rel="prefetch" href="/blog/assets/js/62.1b74c643.js"><link rel="prefetch" href="/blog/assets/js/63.e17cf4ca.js"><link rel="prefetch" href="/blog/assets/js/64.301be995.js"><link rel="prefetch" href="/blog/assets/js/65.ea2d19f9.js"><link rel="prefetch" href="/blog/assets/js/66.6f47cee3.js"><link rel="prefetch" href="/blog/assets/js/67.8030b9fe.js"><link rel="prefetch" href="/blog/assets/js/68.fe3eb024.js"><link rel="prefetch" href="/blog/assets/js/69.c91e8d37.js"><link rel="prefetch" href="/blog/assets/js/7.fedd7644.js"><link rel="prefetch" href="/blog/assets/js/70.8776167d.js"><link rel="prefetch" href="/blog/assets/js/71.f4f2d6d7.js"><link rel="prefetch" href="/blog/assets/js/72.7bf2c1c7.js"><link rel="prefetch" href="/blog/assets/js/73.f479c676.js"><link rel="prefetch" href="/blog/assets/js/74.e8fd2e6e.js"><link rel="prefetch" href="/blog/assets/js/75.7726e44a.js"><link rel="prefetch" href="/blog/assets/js/76.ef851d53.js"><link rel="prefetch" href="/blog/assets/js/8.8d45cabc.js"><link rel="prefetch" href="/blog/assets/js/9.cbedb41d.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.318dd407.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>luna-blog</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>luna</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/xiaoxin.jpg" alt="luna-blog" class="logo"> <span class="site-name">luna-blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/通讯/" class="nav-link"><i class="iconfont undefined"></i>
+  通讯
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/genesis/" class="nav-link"><i class="iconfont undefined"></i>
+  genesis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/luna/" class="nav-link"><i class="iconfont undefined"></i>
+  luna
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/kaili/" class="nav-link"><i class="iconfont undefined"></i>
+  kaili
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/mybatis/" class="nav-link"><i class="iconfont undefined"></i>
+  mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  关键字
+</a></div><div class="nav-item"><a href="/blog/forme.html" class="nav-link"><i class="iconfont undefined"></i>
+  readme
+</a></div><div class="nav-item"><a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></div><div class="nav-item"><a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://gitee.com/luna_nov/blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  本站源码
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="http://iszychen.club" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  luna
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><!----> <h3 class="name" data-v-ca798c94>
+    luna
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>65</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>39</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/通讯/" class="nav-link"><i class="iconfont undefined"></i>
+  通讯
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/genesis/" class="nav-link"><i class="iconfont undefined"></i>
+  genesis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/luna/" class="nav-link"><i class="iconfont undefined"></i>
+  luna
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/kaili/" class="nav-link"><i class="iconfont undefined"></i>
+  kaili
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/mybatis/" class="nav-link"><i class="iconfont undefined"></i>
+  mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  关键字
+</a></div><div class="nav-item"><a href="/blog/forme.html" class="nav-link"><i class="iconfont undefined"></i>
+  readme
+</a></div><div class="nav-item"><a href="/blog/categories/日志/" class="nav-link"><i class="iconfont undefined"></i>
+  日志
+</a></div><div class="nav-item"><a href="/blog/categories/个人/" class="nav-link"><i class="iconfont undefined"></i>
+  个人
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://gitee.com/luna_nov/blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  本站源码
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="http://iszychen.club" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  luna
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>blog</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/blog/DateUtils.html" class="sidebar-link">DateUtils方法</a></li><li><a href="/blog/blog/Json.html" class="sidebar-link">Json处理</a></li><li><a href="/blog/blog/apacheDav.html" class="sidebar-link">apache Dav配置</a></li><li><a href="/blog/blog/apacheVirtual.html" class="sidebar-link">apache虚拟主机配置</a></li><li><a href="/blog/blog/brew.html" class="sidebar-link">homebrew教程</a></li><li><a href="/blog/blog/date.html" class="sidebar-link">时间和字符传的转化</a></li><li><a href="/blog/blog/easycode.html" class="sidebar-link">easyCode 代码生成</a></li><li><a href="/blog/blog/exception.html" class="sidebar-link">SpringBoot 统一异常处理</a></li><li><a href="/blog/blog/gitFirst.html" class="sidebar-link">第一个git提交发生了什么</a></li><li><a href="/blog/blog/hello.html" class="sidebar-link">welcome!</a></li><li><a href="/blog/blog/ideaPlugs.html" class="sidebar-link">IDEA插件</a></li><li><a href="/blog/blog/javacv.html" class="sidebar-link">JavaCV调用</a></li><li><a href="/blog/blog/linux_auto_mount.html" class="sidebar-link">linux_automount</a></li><li><a href="/blog/blog/linux_crontab.html" aria-current="page" class="active sidebar-link">linux_crontabs</a></li><li><a href="/blog/blog/linux_practice.html" class="sidebar-link">linux_practice</a></li><li><a href="/blog/blog/linux_systemctl.html" class="sidebar-link">linux_systemctl</a></li><li><a href="/blog/blog/linux_tar.html" class="sidebar-link">linux_tar命令</a></li><li><a href="/blog/blog/linux_user_group.html" class="sidebar-link">linuxusergroup</a></li><li><a href="/blog/blog/logicalOperations.html" class="sidebar-link">逻辑运算符</a></li><li><a href="/blog/blog/luna-commons.html" class="sidebar-link">luna-commons</a></li><li><a href="/blog/blog/luna-commons-common.html" class="sidebar-link">luna-commons-common</a></li><li><a href="/blog/blog/maven.html" class="sidebar-link">maven配置学习</a></li><li><a href="/blog/blog/mysql-install.html" class="sidebar-link">mysql 免安装配置学习</a></li><li><a href="/blog/blog/nginx.html" class="sidebar-link">一个简单的反向代理Nginx</a></li><li><a href="/blog/blog/pyGetterSetter.html" class="sidebar-link">pyGetterSetter</a></li><li><a href="/blog/blog/regular.html" class="sidebar-link">正则表达式</a></li><li><a href="/blog/blog/reply.html" class="sidebar-link">reply</a></li><li><a href="/blog/blog/shiro.html" class="sidebar-link">shiro</a></li><li><a href="/blog/blog/sshPassword.html" class="sidebar-link">ssh配置教程</a></li><li><a href="/blog/blog/timeordate.html" class="sidebar-link">时间和字符传的转化</a></li><li><a href="/blog/blog/util.html" class="sidebar-link">JAVA常用工具类</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>linux_crontabs</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>luna</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-2d5f533b><main class="page" style="padding-right:0;"><div class="page-title" style="display:none;"><h1 class="title">linux_crontabs</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>luna</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-12-24</span></i> <i class="iconfont reco-eye" data-v-3b7f5bdf><span id="/blog/blog/linux_crontab.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-3b7f5bdf><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>linux</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="格式说明与范例"><a href="#格式说明与范例" class="header-anchor">#</a> 格式说明与范例</h2> <p><img src="https://images2015.cnblogs.com/blog/513841/201608/513841-20160812102124078-171184924.png" alt="img"></p> <ul><li><ul><li><ul><li><ul><li><ul><li>command</li></ul></li></ul></li></ul></li></ul></li></ul> <p>分　 时　  日　 月     周　     命令</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code> 第1列表示分钟1～59 每分钟用*或者 */1表示
+ 第2列表示小时1～23（0表示0点）
+ 第3列表示日期1～31
+ 第4列表示月份1～12
+ 第5列标识号星期0～6（0表示星期天）
+ 第6列要运行的命令
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>在以上各个字段中，还可以使用以下特殊字符：</p> <p>星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</p> <p>逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”</p> <p>中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”</p> <p>正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>安装crontab：
+
+yum <span class="token function">install</span> crontabs <span class="token operator">||</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">crontab</span>
+
+服务操作说明：
+
+/sbin/service crond start //启动服务
+
+/sbin/service crond stop //关闭服务
+
+/sbin/service crond restart //重启服务
+
+/sbin/service crond reload //重新载入配置
+
+查看crontab服务状态：
+
+<span class="token function">service</span> crond status
+
+手动启动crontab服务：
+
+<span class="token function">service</span> crond start
+
+查看crontab服务是否已设置为开机启动，执行命令：
+
+ntsysv
+
+加入开机自动启动：
+
+<span class="token function">chkconfig</span> –level <span class="token number">35</span> crond on
+
+基础命令：
+
+-e 表示编辑当前的crontab
+
+-l 表示列表显示当前的crontab任务
+
+-r 表示删除当前用户的crontab
+
+-i 表示删除crontab时给予提示信息
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><h2 id="使用实例"><a href="#使用实例" class="header-anchor">#</a> 使用实例</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Cron表达式范例：
+             每隔5秒执行一次：*/5 * * * * ?
+ 
+             每隔1分钟执行一次：0 */1 * * * ?
+ 
+             每天23点执行一次：0 <span class="token number">0</span> <span class="token number">23</span> * * ?
+ 
+             每天凌晨1点执行一次：0 <span class="token number">0</span> <span class="token number">1</span> * * ?
+ 
+             每月1号凌晨1点执行一次：0 <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> * ?
+ 
+             每月最后一天23点执行一次：0 <span class="token number">0</span> <span class="token number">23</span> L * ?
+ 
+             每周星期天凌晨1点实行一次：0 <span class="token number">0</span> <span class="token number">1</span> ? * L
+<span class="token number">1</span>、每天6:00执行
+ 
+<span class="token number">0</span> <span class="token number">6</span> * * * root /home/mvp/osyunwei.sh
+ 
+<span class="token number">2</span>、每周六凌晨4:00执行
+ 
+<span class="token number">0</span> <span class="token number">4</span> * * <span class="token number">6</span> root /home/mvp/osyunwei.sh
+ 
+<span class="token number">3</span>、每周六凌晨4:05执行
+ 
+<span class="token number">5</span> <span class="token number">4</span> * * <span class="token number">6</span> root /home/mvp/osyunwei.sh 
+ 
+<span class="token number">4</span>、每周六凌晨4:15执行
+ 
+<span class="token number">15</span> <span class="token number">4</span> * * <span class="token number">6</span> root /home/mvp/osyunwei.sh
+ 
+<span class="token number">5</span>、每周六凌晨4:25执行
+ 
+<span class="token number">25</span> <span class="token number">4</span> * * <span class="token number">6</span> root /home/mvp/osyunwei.sh
+ 
+<span class="token number">6</span>、每周六凌晨4:35执行
+ 
+<span class="token number">35</span> <span class="token number">4</span> * * <span class="token number">6</span> root /home/mvp/osyunwei.sh
+ 
+<span class="token number">7</span>、每周六凌晨5:00执行
+ 
+<span class="token number">5</span> * * <span class="token number">6</span> root /home/mvp/osyunwei.sh
+ 
+<span class="token number">8</span>、每天8:40执行
+ 
+<span class="token number">40</span> <span class="token number">8</span> * * * root /home/mvp/osyunwei.sh
+ 
+<span class="token number">9</span>、每天8:30执行
+ 
+<span class="token number">30</span> <span class="token number">8</span> * * * root /home/mvp/osyunwei.sh
+ 
+<span class="token number">10</span>、每周一到周五的11:41开始，每隔10分钟执行一次    <span class="token comment">#值得借鉴</span>
+ 
+<span class="token number">41,51</span> <span class="token number">11</span> * * <span class="token number">1</span>-5   root /home/mvp/osyunwei.sh
+ 
+或者
+ 
+<span class="token number">1</span>-59/10 <span class="token number">12</span>-23 * * <span class="token number">1</span>-5   root /home/mvp/osyunwei.sh
+ 
+<span class="token number">11</span>、在每天的10:31开始，每隔2小时重复一次
+ 
+<span class="token number">31</span> <span class="token number">10</span>-23/2 * * * root   /home/mvp/osyunwei.sh
+ 
+<span class="token number">12</span>、每天15:00执行
+ 
+<span class="token number">0</span> <span class="token number">15</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">13</span>、每天的10:30开始，每隔2小时重复一次
+ 
+<span class="token number">30</span> <span class="token number">10</span>-23/2 * * * root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">14</span>、每天15:30执行
+ 
+<span class="token number">30</span> <span class="token number">15</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">15</span>、每天17:50执行
+ 
+<span class="token number">50</span> <span class="token number">17</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">16</span>、每天8:00执行
+ 
+<span class="token number">0</span> <span class="token number">8</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">17</span>、每天18:00执行
+ 
+<span class="token number">0</span> <span class="token number">18</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">18</span>、每天8:30执行
+ 
+<span class="token number">30</span> <span class="token number">8</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">19</span>、每天20:30
+ 
+<span class="token number">30</span> <span class="token number">20</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">20</span>、每周一到周五2:00
+ 
+<span class="token number">0</span> <span class="token number">2</span> * * <span class="token number">1</span>-5 root /home/mvp/osyunwei.sh
+ 
+<span class="token number">21</span>、每周一到周五9:30
+ 
+<span class="token number">30</span> <span class="token number">9</span> * * <span class="token number">1</span>-5 root /home/mvp/osyunwei.sh
+ 
+<span class="token number">22</span>、每周一到周五8:00，每周一到周五9:00
+ 
+<span class="token number">0</span> <span class="token number">8,9</span> * * <span class="token number">1</span>-5  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">23</span>、每天23:59
+ 
+<span class="token number">59</span> <span class="token number">23</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">24</span>、每周六23:59
+ 
+<span class="token number">59</span> <span class="token number">23</span> * * <span class="token number">6</span>  root    /home/mvp/osyunwei.sh
+ 
+<span class="token number">25</span>、每天0:30
+ 
+<span class="token number">30</span> <span class="token number">0</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">26</span>、每周一到周五9:25到11:35之间、13:00到15:00之间，每隔10分钟运行一次
+ 
+分区段写值得借鉴
+ 
+<span class="token number">25,35</span>,45,55  <span class="token number">9</span> * * <span class="token number">1</span>-5  root   /home/mvp/osyunwei.sh
+ 
+<span class="token number">5</span>-59/10  <span class="token number">10</span> * * <span class="token number">1</span>-5  root   /home/mvp/osyunwei.sh
+ 
+<span class="token number">5,15</span>,25,35  <span class="token number">11</span> * * <span class="token number">1</span>-5  root   /home/mvp/osyunwei.sh
+ 
+*/10  <span class="token number">13</span>-15 * * <span class="token number">1</span>-5  root   /home/mvp/osyunwei.sh
+ 
+<span class="token number">27</span>、每周一到周五8:30、8:50、9:30、10:00、10:30、11:00、11:30、13:30、14:00、14:30、5:00分别执行一次
+ 
+<span class="token number">30,50</span> <span class="token number">8</span> * * <span class="token number">1</span>-5  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">30</span> <span class="token number">9</span> * * <span class="token number">1</span>-5  root  /home/mvp/osyunwei.sh
+ 
+*/30 <span class="token number">10</span>-11 * * <span class="token number">1</span>-5  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">30</span> <span class="token number">13</span> * * <span class="token number">1</span>-5  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">0,30</span> <span class="token number">14</span>-15 * * <span class="token number">1</span>-5  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">28</span>、每天23:50执行
+ 
+<span class="token number">50</span> <span class="token number">23</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">29</span>、每天10:00、16:00执行
+ 
+<span class="token number">0</span> <span class="token number">10,16</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">30</span>、每天5:30执行
+ 
+<span class="token number">30</span> <span class="token number">5</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">31</span>、每周一到周五9:30执行
+ 
+<span class="token number">30</span> <span class="token number">9</span> * * <span class="token number">1</span>-5  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">32</span>、每周一到周五13:00执行
+ 
+<span class="token number">0</span> <span class="token number">13</span> * * <span class="token number">1</span>-5  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">33</span>、每天7:51执行
+ 
+<span class="token number">51</span> <span class="token number">7</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">34</span>、每天7:53、12:40分别执行一次
+ 
+<span class="token number">53</span> <span class="token number">7</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">40</span> <span class="token number">12</span> * * *  root /home/mvp/osyunwei.sh
+ 
+<span class="token number">35</span>、每天7:55执行
+ 
+<span class="token number">55</span> <span class="token number">7</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">36</span>、每天8:10、16:00、20:00分别执行一次
+ 
+<span class="token number">10</span> <span class="token number">8</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">0</span> <span class="token number">16</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">0</span> <span class="token number">20</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">37</span>、每天7:57、8:00分别执行一次
+ 
+<span class="token number">57</span> <span class="token number">7</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+<span class="token number">0</span> <span class="token number">8</span> * * *  root  /home/mvp/osyunwei.sh
+ 
+             在26分、29分、33分执行一次：0 <span class="token number">26,29</span>,33 * * * ?
+ 
+             每天的0点、13点、18点、21点都执行一次：0 <span class="token number">0</span> <span class="token number">0,13</span>,18,21 * * ?
+ 
+实例1：每1分钟执行一次command
+ 
+命令：
+ 
+* * * * * <span class="token builtin class-name">command</span>
+ 
+ 
+ 
+实例2：每小时的第3和第15分钟执行
+ 
+命令：
+ 
+<span class="token number">3,15</span> * * * * <span class="token builtin class-name">command</span>
+ 
+ 
+ 
+实例3：在上午8点到11点的第3和第15分钟执行
+ 
+命令：
+ 
+<span class="token number">3,15</span> <span class="token number">8</span>-11 * * * <span class="token builtin class-name">command</span>
+ 
+ 
+ 
+实例4：每隔两天的上午8点到11点的第3和第15分钟执行
+ 
+命令：
+ 
+<span class="token number">3,15</span> <span class="token number">8</span>-11 */2 * * <span class="token builtin class-name">command</span>
+ 
+ 
+ 
+实例5：每个星期一的上午8点到11点的第3和第15分钟执行
+ 
+命令：
+ 
+<span class="token number">3,15</span> <span class="token number">8</span>-11 * * <span class="token number">1</span> <span class="token builtin class-name">command</span>
+ 
+ 
+ 
+实例6：每晚的21:30重启smb 
+ 
+命令：
+ 
+<span class="token number">30</span> <span class="token number">21</span> * * * /etc/init.d/smb restart
+ 
+ 
+ 
+实例7：每月1、10、22日的4 <span class="token builtin class-name">:</span> <span class="token number">45</span>重启smb 
+ 
+命令：
+ 
+<span class="token number">45</span> <span class="token number">4</span> <span class="token number">1,10</span>,22 * * /etc/init.d/smb restart
+ 
+ 
+ 
+实例8：每周六、周日的1 <span class="token builtin class-name">:</span> <span class="token number">10</span>重启smb
+ 
+命令：
+ 
+<span class="token number">10</span> <span class="token number">1</span> * * <span class="token number">6,0</span> /etc/init.d/smb restart
+ 
+ 
+ 
+实例9：每天18 <span class="token builtin class-name">:</span> 00至23 <span class="token builtin class-name">:</span> 00之间每隔30分钟重启smb 
+ 
+命令：
+ 
+<span class="token number">0,30</span> <span class="token number">18</span>-23 * * * /etc/init.d/smb restart
+ 
+ 
+ 
+实例10：每星期六的晚上11 <span class="token builtin class-name">:</span> 00 pm重启smb 
+ 
+命令：
+ 
+<span class="token number">0</span> <span class="token number">23</span> * * <span class="token number">6</span> /etc/init.d/smb restart
+ 
+ 
+ 
+实例11：每一小时重启smb 
+ 
+命令：
+ 
+* */1 * * * /etc/init.d/smb restart
+ 
+ 
+ 
+实例12：晚上11点到早上7点之间，每隔一小时重启smb 
+ 
+命令：
+ 
+* <span class="token number">23</span>-7/1 * * * /etc/init.d/smb restart
+ 
+ 
+ 
+实例13：每月的4号与每周一到周三的11点重启smb 
+ 
+命令：
+ 
+<span class="token number">0</span> <span class="token number">11</span> <span class="token number">4</span> * mon-wed /etc/init.d/smb restart
+ 
+ 
+ 
+实例14：一月一号的4点重启smb 
+ 
+命令：
+ 
+<span class="token number">0</span> <span class="token number">4</span> <span class="token number">1</span> jan * /etc/init.d/smb restart
+ 
+实例15：每小时执行/etc/cron.hourly目录内的脚本
+ 
+命令：
+ 
+01   *   *   *   *     root run-parts /etc/cron.hourly
+ 
+说明：
+ 
+run-parts这个参数了，如果去掉这个参数的话，后面就可以写要运行的某个脚本名，而不是目录名了
+ 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br></div></div><h2 id="三、其他问题"><a href="#三、其他问题" class="header-anchor">#</a> 三、其他问题</h2> <h4 id="注意环境变量问题"><a href="#注意环境变量问题" class="header-anchor">#</a> 注意环境变量问题</h4> <p>有时我们创建了一个crontab，但是这个任务却无法自动执行，而手动执行这个任务却没有问题，这种情况一般是由于在crontab文件中没有配置环境变量引起的。</p> <p>在crontab文件中定义多个调度任务时，需要特别注意的一个问题就是环境变量的设置，因为我们手动执行某个任务时，是在当前shell环境下进行的，程序当然能找到环境变量，而系统自动执行任务调度时，是不会加载任何环境变量的，因此，就需要在crontab文件中指定任务运行所需的所有环境变量，这样，系统执行任务调度时就没有问题了。</p> <p>不要假定cron知道所需要的特殊环境，它其实并不知道。所以你要保证在shelll脚本中提供所有必要的路径和环境变量，除了一些自动设置的全局变量。所以注意如下3点：</p> <p>1）脚本中涉及文件路径时写全局路径；</p> <p>2）脚本执行要用到java或其他环境变量时，通过source命令引入环境变量，如：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">cat</span> start_cbp.sh
+
+<span class="token punctuation">\</span>#<span class="token operator">!</span>/bin/sh
+
+<span class="token builtin class-name">source</span> /etc/profile
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">RUN_CONF</span><span class="token operator">=</span>/home/d139/conf/platform/cbp/cbp_jboss.conf
+
+/usr/local/jboss-4.0.5/bin/run.sh -c mev <span class="token operator">&amp;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>3）当手动执行脚本OK，但是crontab死活不执行时。这时必须大胆怀疑是环境变量惹的祸，并可以尝试在crontab中直接引入环境变量解决问题。如：</p> <p>0 * * * * . /etc/profile;/bin/sh /var/www/java/audit_no_count/bin/restart_audit.sh</p> <h4 id="注意清理系统用户的邮件日志"><a href="#注意清理系统用户的邮件日志" class="header-anchor">#</a> 注意清理系统用户的邮件日志</h4> <p>每条任务调度执行完毕，系统都会将任务输出信息通过电子邮件的形式发送给当前系统用户，这样日积月累，日志信息会非常大，可能会影响系统的正常运行，因此，将每条任务进行重定向处理非常重要。</p> <p>例如，可以在crontab文件中设置如下形式，忽略日志输出：</p> <p>0 */3 * * * /usr/local/apache2/apachectl restart &gt;/dev/null 2&gt;&amp;1</p> <p>“/dev/null 2&gt;&amp;1”表示先将标准输出重定向到/dev/null，然后将标准错误重定向到标准输出，由于标准输出已经重定向到了/dev/null，因此标准错误也会重定向到/dev/null，这样日志输出问题就解决了。</p> <h4 id="系统级任务调度与用户级任务调度"><a href="#系统级任务调度与用户级任务调度" class="header-anchor">#</a> 系统级任务调度与用户级任务调度</h4> <p>系统级任务调度主要完成系统的一些维护操作，用户级任务调度主要完成用户自定义的一些任务，可以将用户级任务调度放到系统级任务调度来完成（不建议这么做），但是反过来却不行，root用户的任务调度操作可以通过“crontab –uroot –e”来设置，也可以将调度任务直接写入/etc/crontab文件，需要注意的是，如果要定义一个定时重启系统的任务，就必须将任务放到/etc/crontab文件，即使在root用户下创建一个定时重启系统的任务也是无效的。</p> <h4 id="其他注意事项"><a href="#其他注意事项" class="header-anchor">#</a> 其他注意事项</h4> <p>新创建的cron job，不会马上执行，至少要过2分钟才执行。如果重启cron则马上执行。</p> <p>当crontab突然失效时，可以尝试/etc/init.d/crond restart解决问题。或者查看日志看某个job有没有执行/报错tail -f /var/log/cron。</p> <p>千万别乱运行crontab -r。它从Crontab目录（/var/spool/cron）中删除用户的Crontab文件。删除了该用户的所有crontab都没了。</p> <p>在crontab中%是有特殊含义的，表示换行的意思。如果要用的话必须进行转义%，如经常用的date ‘+%Y%m%d’在crontab里是不会执行的，应该换成date ‘+%Y%m%d’。</p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="reco-bgm-panel" data-v-39f9e6e0><audio id="bgm" src="/blog/audio/DancingWithYourGhost.mp3" data-v-39f9e6e0></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><img src="/blog/images/DancingWithYourGhost.jpg" data-v-39f9e6e0></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:99999;" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><div class="reco-bgm-cover" style="background-image:url(/blog/images/DancingWithYourGhost.jpg);" data-v-39f9e6e0><div class="mini-operation" style="display:none;" data-v-39f9e6e0><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-39f9e6e0></i></div> <div class="falut-message" style="display:none;" data-v-39f9e6e0>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><div class="info-box" data-v-39f9e6e0><i class="reco-bgm reco-bgm-music music" data-v-39f9e6e0></i>Sasha Sloan - Dancing With Your Ghost</div> <div class="info-box" data-v-39f9e6e0><i class="reco-bgm reco-bgm-artist" data-v-39f9e6e0></i>Sasha Sloan</div> <div class="reco-bgm-progress" data-v-39f9e6e0><div class="progress-bar" data-v-39f9e6e0><div class="bar" data-v-39f9e6e0></div></div></div> <div class="reco-bgm-operation" data-v-39f9e6e0><i class="reco-bgm reco-bgm-last last" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-play play" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-next next" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-39f9e6e0></i> <div class="volume-bar" data-v-39f9e6e0><div class="bar" data-v-39f9e6e0></div></div></div></div> <div class="reco-bgm-left-box" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><i class="reco-bgm reco-bgm-left" data-v-39f9e6e0></i></div></div></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:10px;bottom:190px;display:none;" data-v-5775ee02>
+      luna-message
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div></div></div>
+    <script src="/blog/assets/js/app.55b30f78.js" defer></script><script src="/blog/assets/js/3.15f56079.js" defer></script><script src="/blog/assets/js/1.9ec5a713.js" defer></script><script src="/blog/assets/js/25.01bb3c04.js" defer></script>
+  </body>
+</html>
