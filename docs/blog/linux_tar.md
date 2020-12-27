@@ -1,5 +1,5 @@
 ---
-title: linux_tar命令
+title: linux_tar
 date: 2020-04-02
 banner_img: /img/java1.jpg
 tags: 
