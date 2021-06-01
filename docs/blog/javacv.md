@@ -5,7 +5,8 @@ banner_img: /img/opencv.jpg
 tags: 
  - video
 categories:
- - 日志
+ - java
+ - javacv
 ---
 
 ### JavaCV调用摄像, javacv 包含了opencv ,ffmpeg 等图像处理包 使用javacpp 转为C 文件后执行

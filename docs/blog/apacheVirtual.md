@@ -1,12 +1,12 @@
 ---
-title: apache虚拟主机配置
+title: apache 虚拟主机配置
 date: 2020-05-05
 banner_img: /img/java1.jpg
 tags: 
  - apache
 categories:
- - 日志
-
+ - basic-component
+ - apache
 ---
 
 ## apache虚拟主机配置
@@ -124,7 +124,7 @@ Limit
 
 允许使用控制主机访问的指令(Allow, Deny, Order)。 一般 Apache 新安装 AllowOverride 默认为「None」。
 
-一般都尽可能避免使用.htaccess文件，任何希望放在.htaccess文件中的配置，都可放在主配置的"<Directory>”段中。避免使用的原因主要有：
+一般都尽可能避免使用.htaccess文件，任何希望放在.htaccess文件中的配置，都可放在主配置的"Directory”段中。避免使用的原因主要有：
 
 性能问题
 

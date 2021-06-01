@@ -1,11 +1,14 @@
 ---
 title: shiro
 date: 2020-04-02
-banner_img: /img/shiro.jpg
+banner_img: /img/shiro.png
+index_img: /img/shiro.jpg
 tags: 
  - shiro
 categories:
- - 日志
+ - java
+ - middle-component
+ - shiro
 ---
 
 ## Shiro框架中有三个核心概念：Subject ，SecurityManager和Realms。

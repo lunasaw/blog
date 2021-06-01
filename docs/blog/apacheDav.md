@@ -1,12 +1,12 @@
 ---
-title: apache Dav配置
+title: apachedav配置
 date: 2020-05-05
 banner_img: /img/java1.jpg
 tags: 
  - apache
 categories:
- - 日志
-
+ - basic-component
+ - apache
 ---
 
 ## 1.安装apache

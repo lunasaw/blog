@@ -1,11 +1,12 @@
 ---
 title: pyGetterSetter
 date: 2020-04-13
-banner_img: /img/python.jpg
+banner_img: /img/python.png
+index_img: /img/python.png
 tags: 
  - python
 categories:
- - 日志
+ - python
 ---
 
 Java中我们在定义类的成员变量时，如果是私有属性，我们通过调用属性对应的set和get方法来获取和设置变量的值，如果我们将这种方式来用于python那么代码如下:

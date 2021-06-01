@@ -1,11 +1,13 @@
 ---
 title: mysql 免安装配置学习
 date: 2020-07-27
-banner_img: /blog/img/Pikachu.jpg
+banner_img: /img/mysql.jpg
+index_img: /img/mysql.png
 tags: 
  - mysql-install
 categories:
- - 日志
+ - basic-component
+ - mysql
 ---
 
 ## [MySQL5.7绿色版（免装版）的初始化和修改密码](https://www.cnblogs.com/jyiqing/p/6924062.html)
@@ -22,7 +24,7 @@ categories:
 
  
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531143529352-602278557.png)
+![img](https://i.loli.net/2021/04/18/Fslm6cZMqWU5JCz.png)
 
 
 
@@ -32,7 +34,7 @@ categories:
 
  
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531144247352-1580893970.png)
+![img](https://i.loli.net/2021/04/18/hqpuc7SHXJ8LQgP.png)
 
  
 
@@ -42,13 +44,13 @@ categories:
 
 2.1解压以后，在目录下创建一个data文件夹
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531144826149-841051205.png)
+![img](https://i.loli.net/2021/04/18/GCqjWEg8un7N46r.png)
 
  
 
 2.2如果原来已经有一个data文件夹，就把里面的数据全部删掉。
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531145236946-1572810043.png)
+![img](https://i.loli.net/2021/04/18/YZfb3eRmorDVaJ8.png)
 
 
 
@@ -60,11 +62,11 @@ categories:
 
 右键开始菜单→选择  命令提示符（管理员）  
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531145850039-1319323901.png)
+![img](https://i.loli.net/2021/04/18/VRUrtOW9iNyLcKl.png)
 
 3.2在cmd中打开mysql的bin文件夹
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531150209180-1118035298.png)
+![img](https://i.loli.net/2021/04/18/LCwnjzseMSNaPOJ.png)
 
  
 
@@ -72,7 +74,7 @@ categories:
 
 3.3.1运行命令mysqld –install安装服务，如下图：
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531150533821-1911670674.png)
+![img](https://i.loli.net/2021/04/18/9n3YDyxGzNiP25Q.png)
 
  
 
@@ -80,7 +82,7 @@ categories:
 
 3.3.2（可忽略）如果不需要mysql里，只需要运行mysqld –remove即可移除，如下图
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531150657743-1551155360.png)
+![img](https://i.loli.net/2021/04/18/ZO9XSDgvMQluIVa.png)
 
  
 
@@ -92,17 +94,17 @@ categories:
 
 如图：
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531152920946-912565873.png)
+![img](https://i.loli.net/2021/04/18/wWMe2ogFzNkxLq9.png)
 
 ## 5启动服务
 
 5.1运行net start mysql 启动服务，如下图:
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531152123868-1945981492.png)
+![img](https://i.loli.net/2021/04/18/NQcxrwq8CvEWkAj.png)
 
 5.2运行net stop mysql 启动服务，如下图:
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531152232321-1808686512.png)
+![img](https://i.loli.net/2021/04/18/qv6uYVKd5RgsUyF.png)
 
 
 
@@ -112,13 +114,13 @@ categories:
 
 如下图：
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531153348243-2114953114.png)
+![img](https://i.loli.net/2021/04/18/TVWS7py5utzA8fE.png)
 
  
 
  这里不需要密码，直接按回车键
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531153504321-346439667.png)
+![img](https://i.loli.net/2021/04/18/ZVoBid1muUFENrt.png)
 
 看到 mysql> 就证明是成功进入mysql的了
 
@@ -128,7 +130,7 @@ categories:
 
 7.1创建.txt文件，改名为my.ini
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531153816274-47071108.png)
+![img](https://i.loli.net/2021/04/18/k9GPZ2D7nFf3pMA.png)
 
 将以下代码添加到my.ini
 
@@ -143,7 +145,7 @@ default-character-set=utf8
 
  如图：
 
-![img](https://images2015.cnblogs.com/blog/1082630/201706/1082630-20170602093831883-1704012524.png)
+![img](https://i.loli.net/2021/04/18/Sc3UfXNeYqiw2Pd.png)
 
  
 
@@ -153,11 +155,11 @@ default-character-set=utf8
 
 7.2.2查看编码命令：`show variables ``like '``character``%';（修改前）`
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531193918618-75843652.png)
+![img](https://i.loli.net/2021/04/18/2tIM8EgOsAauTYG.png)
 
  7.2.3查看编码命令：`show variables ``like '``character``%';（修改后）`
 
- ![img](https://images2015.cnblogs.com/blog/1082630/201706/1082630-20170602094015118-857002467.png)
+ ![img](https://i.loli.net/2021/04/18/BxcSJWG346qTHme.png)
 
 
 
@@ -189,7 +191,7 @@ quit;
 
 
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531194355243-1786061531.png)
+![img](https://i.loli.net/2021/04/18/cQzYPhGJK324mVd.png)
 
  
 
@@ -197,13 +199,13 @@ quit;
 
  
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531194415164-1674331383.png)
+![img](https://i.loli.net/2021/04/18/Qxkv5G4cCVbpjXf.png)
 
  
 
 c.
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531194513868-541684904.png)
+![img](https://i.loli.net/2021/04/18/C8KUryuVfz4dOkW.png)
 
  
 
@@ -211,7 +213,7 @@ c.
 
  d.
 
-![img](https://images2015.cnblogs.com/blog/1082630/201705/1082630-20170531194603368-61233480.png)
+![img](https://i.loli.net/2021/04/18/nGYSEdOCfsq6AKt.png)
 
  
 

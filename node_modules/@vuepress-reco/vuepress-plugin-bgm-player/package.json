@@ -1,0 +1,32 @@
+{
+  "name": "@vuepress-reco/vuepress-plugin-bgm-player",
+  "version": "1.1.3",
+  "description": "bgm player plugin for vuepress themes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint-ext": "eslint --ext .js,.vue ./",
+    "eslint-fix": "eslint --fix --ext .js,.vue ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuepress-reco/vuepress-plugin-bgm-player.git"
+  },
+  "keywords": [
+    "vuepress-theme-reco",
+    "bgm player",
+    "vuepress",
+    "music player"
+  ],
+  "author": "zsw <zsw0407@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuepress-reco/vuepress-plugin-bgm-player/issues"
+  },
+  "homepage": "https://vuepress-theme-reco.recoluan.com/en/views/plugins/bgmPlayer.html",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-plugin-vue": "^5.2.3"
+  }
+}

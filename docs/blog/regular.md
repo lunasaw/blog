@@ -1,11 +1,13 @@
 ---
 title: 正则表达式
 date: 2020-04-05
-banner_img: /img/regular.jpg
+banner_img: /img/regular.png
+index_img: /img/regular.png
 tags: 
  - regular
 categories:
- - 日志
+ - java
+ - basic-language
 ---
 
 ### 1. 构建正则表达式

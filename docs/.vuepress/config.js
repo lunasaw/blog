@@ -38,8 +38,8 @@ module.exports = {
       nav: [
         { text: '首页', link: '/' },
         { text: 'readme', link: '/forme.md' },
-        { text: '日志', link: '/categories/日志/' },
-        { text: '个人', link: '/categories/个人/' },
+        // { text: '日志', link: '/categories/日志/' },
+        // { text: '个人', link: '/categories/个人/' },
         { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
         { text: '本站源码', link: 'https://gitee.com/luna_nov/blog' },
         // {

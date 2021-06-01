@@ -1,0 +1,31 @@
+{
+  "name": "@vuepress-reco/vuepress-plugin-kan-ban-niang",
+  "version": "1.0.5",
+  "description": "Kan-ban-niang plugin for vuepress-theme-reco or other vuepress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint-ext": "eslint --ext .js,.vue ./",
+    "eslint-fix": "eslint --fix --ext .js,.vue ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuepress-reco/vuepress-plugin-kan-ban-niang.git"
+  },
+  "keywords": [
+    "vuepress-theme-reco",
+    "live2D",
+    "vuepress"
+  ],
+  "author": "zsw <zsw0407@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuepress-reco/vuepress-plugin-kan-ban-niang/issues"
+  },
+  "homepage": "https://vuepress-theme-reco.recoluan.com",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-plugin-vue": "^5.2.3"
+  }
+}

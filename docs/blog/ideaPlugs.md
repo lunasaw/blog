@@ -1,11 +1,12 @@
 ---
 title: IDEA插件
 date: 2020-04-13
-banner_img: /blog/img/idea.jpg
+banner_img: /img/idea.jpg
 tags: 
  - idea
 categories:
- - 日志
+ - basic-component
+ - idea
 ---
 
 今天介绍一下IDEA的一些炫酷的插件，IDEA强大的插件库，不仅能给我们带来一些开发的便捷，还能体现我们的与众不同。

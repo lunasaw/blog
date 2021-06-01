@@ -1,11 +1,12 @@
 ---
 title: 时间和字符传的转化
 date: 2020-04-13
-banner_img: /blog/img/java2.jpg
+banner_img: /img/java1.jpg
+index_img: /img/java.png
 tags: 
  - date
 categories:
- - 日志
+ - java
 ---
 
 ###   时间和字符传的转化

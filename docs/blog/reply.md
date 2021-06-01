@@ -3,9 +3,9 @@ title: reply
 date: 2020-06-01
 banner_img: /img/genesis.jpg
 tags: 
- - replay
+ - reply
 categories:
- - 日志
+ - genesis
 ---
 
 ### 1.如何将教务系统信息导入系统？怎么保证这些信息的安全？

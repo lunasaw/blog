@@ -1,11 +1,12 @@
 ---
 title: luna-commons
 date: 2020-07-27
-banner_img: /img/Pikachu.jpg
+banner_img: /img/java2.jpg
+index_img: /img/luna.png
 tags: 
  - commons
 categories:
- - 个人
+ - project
 ---
 
 # luna-commons

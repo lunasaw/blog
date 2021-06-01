@@ -5,7 +5,8 @@ banner_img: /img/java1.jpg
 tags: 
  - Mac-brew
 categories:
- - 日志
+ - system
+ - macos
 
 ---
 

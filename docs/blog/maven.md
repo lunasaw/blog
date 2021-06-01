@@ -1,11 +1,13 @@
 ---
 title: maven配置学习
 date: 2020-07-27
-banner_img: /blog/img/Pikachu.jpg
+banner_img: /img/maven.png
+index_img: /img/maven.jpg
 tags: 
  - maven
 categories:
- - 日志
+ - basic-component
+ - maven
 ---
 <div class="htmledit_views" id="content_views">
                                             <p>二、pom文件节点</p>
